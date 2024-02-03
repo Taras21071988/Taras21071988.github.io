@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My exercises</title>
+    <link rel="stylesheet" href="css/main.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -12,12 +13,39 @@
     />
   </head>
   <body>
-    <h1>My exercises</h1>
-    <a href="../index.html">Повернутися на головну</a>
-    <ul>
-      <li><a href="./lecture-01/index.html">Lection 1</a></li>
-      <li><a href="./lecture-02/index.html">Lection 2</a></li>
-      <li><a href="./lecture-03/index.html">Lection 3</a></li>
-    </ul>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <h1 class="header__title">My exercises</h1>
+          <a class="header__link" href="../index.html"
+            >Повернутися на головну</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="lecture">
+        <div class="container">
+          <h2 class="lecture__title">Тут додаватимуться посилання на виконані завдання</h2>
+          <ul class="lecture__list">
+            <li class="lecture__list-item">
+              <a class="list__item-link" href="./lecture-01/index.html"
+                >Lection 1</a
+              >
+            </li>
+            <li class="lecture__list-item">
+              <a class="list__item-link" href="./lecture-02/index.html"
+                >Lection 2</a
+              >
+            </li>
+            <li class="lecture__list-item">
+              <a class="list__item-link" href="./lecture-03/index.html"
+                >Lection 3</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
