@@ -1,0 +1,14 @@
+@import url("my-imported-styles.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  --primary-text-color: #000;
+  --primary-bg-color: #fff;
+}
+footer {
+  --footer-text-color: #fff;
+  --footer-bg-color: #000;
+}
