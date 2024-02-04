@@ -10,6 +10,16 @@ html {
   margin: 0px;
   border: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  pointer-events: none;
+}
 
 a {
   color: inherit;

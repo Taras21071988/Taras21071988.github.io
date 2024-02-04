@@ -6,11 +6,11 @@
     <title>Catalog</title>
     <link rel="stylesheet" href="./../css/main.css" />
     <link
-    rel="shortcut icon"
-    type="image/png"
-    sizes="32x32"
-    href="../favicon-32x32.png"
-  />
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
   </head>
   <body>
     <header class="header">
@@ -22,20 +22,32 @@
             <a class="menu__about" href="about.html">About</a>
             <a class="menu__catalog" href="#">Catalog</a>
             <a class="menu__contact" href="contact.html">Contact</a>
+            <div class="slider">
+              <input
+                class="header__inp"
+                type="checkbox"
+                value="None"
+                id="slider"
+                name="check"
+                onchange="changeTheme(this.checked)"
+              />
+              <label class="label__header" for="slider"></label>
+            </div>
+            <p>Dark Theme</p>
           </nav>
         </div>
       </div>
     </header>
     <main class="main">
-        <div class="container">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-            tempore ducimus rerum animi architecto impedit, voluptatem
-            necessitatibus autem distinctio tempora! Aut consectetur architecto
-            cum quaerat minus numquam delectus, nam ipsum.
-          </p>
-        </div>
-      </main>
+      <div class="container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
+          tempore ducimus rerum animi architecto impedit, voluptatem
+          necessitatibus autem distinctio tempora! Aut consectetur architecto
+          cum quaerat minus numquam delectus, nam ipsum.
+        </p>
+      </div>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
@@ -45,7 +57,8 @@
             </p>
           </div>
           <div class="footer__link">
-            <ul class="link__list"><span class="list__name">Navigation:</span>
+            <ul class="link__list">
+              <span class="list__name">Navigation:</span>
               <li><a href="../index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="#">Catalog</a></li>
@@ -66,5 +79,6 @@
         </div>
       </div>
     </footer>
+    <script src="../app/app.js"></script>
   </body>
 </html>

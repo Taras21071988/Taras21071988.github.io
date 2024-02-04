@@ -1,4 +1,16 @@
-@import url("my-imported-styles.css");
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --bs-color: rgba(0, 0, 0, 0.15);
+  --font-main: "Montserrat", sans-serif;
+  --fs-main: 18px;
+}
+
+[dark] {
+  --bg-color: #333;
+  --text-color: #eee;
+  --bs-color: rgba(127, 118, 118, 0.55);
+}
 
 * {
   margin: 0;
@@ -8,6 +20,7 @@ html {
   --primary-text-color: #000;
   --primary-bg-color: #fff;
 }
+
 footer {
   --footer-text-color: #fff;
   --footer-bg-color: #000;
