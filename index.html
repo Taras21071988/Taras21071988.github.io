@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" value="notranslate" />
     <title>My website</title>
     <link rel="stylesheet" href="css/main.css" />
     <link
@@ -12,31 +13,36 @@
       href="images/favicon-32x32.png"
     />
   </head>
-  <body>
+  <body class="notranslate">
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
           <!-- Використовую код svg для можливості зміни кольору при перемиканні теми -->
-          <div style="width: 50px">
-            <svg
-              version="1.1"
-              id="Layer_1"
-              x="0px"
-              y="0px"
-              viewBox="0 0 50 50"
-              style="enable-background: new 0 0 50 50"
-              xml:space="preserve"
-            >
-              <g></g>
-              <path
-                class="logo"
-                d="M43,45H8 c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h35c1.105,0,2,0.895,2,2v35C45,44.105,44.105,45,43,45z"
-              />
-              <path
-                class="logo"
-                d="M19,45h-5V17.5 c0-3.033,2.467-5.5,5.5-5.5H27c5.514,0,10,4.486,10,10s-4.486,10-10,10h-8V45z M19,27h8c2.757,0,5-2.243,5-5s-2.243-5-5-5h-8V27z"
-              />
-            </svg>
+          <div class="logo__wrapper">
+            <div style="width: 50px">
+              <svg
+                version="1.1"
+                id="Layer_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 50 50"
+                style="enable-background: new 0 0 50 50"
+                xml:space="preserve"
+              >
+                <g></g>
+                <path
+                  class="logo"
+                  d="M43,45H8 c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h35c1.105,0,2,0.895,2,2v35C45,44.105,44.105,45,43,45z"
+                />
+                <path
+                  class="logo"
+                  d="M19,45h-5V17.5 c0-3.033,2.467-5.5,5.5-5.5H27c5.514,0,10,4.486,10,10s-4.486,10-10,10h-8V45z M19,27h8c2.757,0,5-2.243,5-5s-2.243-5-5-5h-8V27z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h1 class="logo__title">portfolio</h1>
+            </div>
           </div>
           <nav class="nav__menu">
             <a class="menu__home" href="index.html">Home</a>
@@ -62,8 +68,21 @@
     <main class="main">
       <section id="descr">
         <div class="container">
-          <div class="main__wrapper">
-            <h1 class="descr__title">Home page</h1>
+          <div class="descr__wrapper">
+            <ul class="descr__title">
+              <ul class="descr__title-item">
+                <li class="title__item">h</li>
+                <li class="title__item">o</li>
+                <li class="title__item">m</li>
+                <li class="title__item">e</li>
+              </ul>
+              <ul class="descr__title-item">
+                <li class="title__item">p</li>
+                <li class="title__item">a</li>
+                <li class="title__item">g</li>
+                <li class="title__item">e</li>
+              </ul>
+            </ul>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
               tempore ducimus rerum animi architecto impedit, voluptatem

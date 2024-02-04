@@ -20,3 +20,8 @@ try {
     checkbox.checked = false;
   }
 } catch (err) {}
+
+let li = document.querySelectorAll(".title__item");
+for (let i = 0, len = li.length; i < len; i++) {
+  li[i].style.animationDelay = i / 10.333 + "s";
+}
