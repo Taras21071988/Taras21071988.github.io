@@ -16,7 +16,29 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <h1 class="header__title">Catalog page</h1>
+          <div style="width: 50px">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 50 50"
+              style="enable-background: new 0 0 50 50"
+              xml:space="preserve"
+            >
+              <g></g>
+              <path
+                class="logo"
+                d="M43,45H8 c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h35c1.105,0,2,0.895,2,2v35C45,44.105,44.105,45,43,45z"
+              />
+              <path
+                class="logo"
+                d="M19,45h-5V17.5 c0-3.033,2.467-5.5,5.5-5.5H27c5.514,0,10,4.486,10,10s-4.486,10-10,10h-8V45z M19,27h8c2.757,0,5-2.243,5-5s-2.243-5-5-5h-8V27z"
+              />
+            </svg>
+          </div>
           <nav class="nav__menu">
             <a class="menu__home" href="../index.html">Home</a>
             <a class="menu__about" href="about.html">About</a>
@@ -26,7 +48,6 @@
               <input
                 class="header__inp"
                 type="checkbox"
-                value="None"
                 id="slider"
                 name="check"
                 onchange="changeTheme(this.checked)"
@@ -39,14 +60,19 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-          tempore ducimus rerum animi architecto impedit, voluptatem
-          necessitatibus autem distinctio tempora! Aut consectetur architecto
-          cum quaerat minus numquam delectus, nam ipsum.
-        </p>
-      </div>
+      <section id="descr">
+        <div class="container">
+          <div class="main__wrapper">
+            <h1 class="descr__title">Catalog page</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
+              tempore ducimus rerum animi architecto impedit, voluptatem
+              necessitatibus autem distinctio tempora! Aut consectetur
+              architecto cum quaerat minus numquam delectus, nam ipsum.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">

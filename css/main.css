@@ -27,15 +27,18 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.logo {
+  fill: none;
+  stroke: var(--text-color);
+}
+
 .header__nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.header__title {
-  font-size: calc(var(--fs-main) * 2);
-}
+
 .nav__menu {
   display: flex;
   align-items: center;
@@ -123,6 +126,10 @@ body {
 
 .main {
   flex: auto;
+}
+.descr__title {
+  font-size: calc(var(--fs-main) * 2);
+  margin-bottom: 20px;
 }
 .footer {
   flex-shrink: 0;
