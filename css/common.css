@@ -1,6 +1,7 @@
 :root {
   --bg-color: #fff;
   --text-color: #000;
+  --text-color-accent: red;
   --bs-color: rgba(0, 0, 0, 0.15);
   --font-main: "Montserrat", sans-serif;
   --fs-main: 18px;
@@ -10,6 +11,7 @@
   --bg-color: #333;
   --text-color: #eee;
   --bs-color: rgba(127, 118, 118, 0.55);
+  --text-color-accent: #27ae60;
 }
 
 * {

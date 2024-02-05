@@ -54,27 +54,30 @@ body {
   font-weight: 500;
   font-size: var(--fs-main);
 }
+.active__menu {
+  color: var(--text-color-accent);
+  pointer-events: none;
+  font-size: calc(var(--fs-main) + 2px);
+  font-weight: 700;
+}
 .menu__home {
   transform: translateY(-400%);
-
   animation: head 1s forwards;
   animation-delay: 0.3s;
 }
+
 .menu__about {
   transform: translateY(-400%);
-
   animation: head 1s forwards;
   animation-delay: 0.6s;
 }
 .menu__catalog {
   transform: translateY(-400%);
-
   animation: head 1s forwards;
   animation-delay: 0.9s;
 }
 .menu__contact {
   transform: translateY(-400%);
-
   animation: head 1s forwards;
   animation-delay: 1.2s;
 }
@@ -131,7 +134,6 @@ body {
 .header__inp:checked + .label__header {
   left: 43px;
 }
-
 .main {
   flex: auto;
 }
