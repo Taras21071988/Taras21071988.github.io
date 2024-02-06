@@ -1,0 +1,61 @@
+/* частина 7 */
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-size: 140%;
+}
+
+h1 {
+  font-size: 240%;
+}
+
+/*частина 2*/
+
+h1,
+h2,
+h3 {
+  color: grey;
+}
+#main {
+  color: #e60202;
+}
+.h2 {
+  color: red;
+}
+.heading {
+  color: green;
+}
+/* частина 3 */
+
+ul > li {
+  font-weight: bold;
+}
+
+section > p {
+  color: red;
+}
+section p {
+  font-size: 25px;
+}
+/* частина 4 */
+.four h1:first-of-type + h2 {
+  color: indigo;
+}
+
+.first a {
+  color: green;
+}
+p .first > a {
+  color: red;
+  font-size: 1.5em;
+}
+div ~ p {
+  color: salmon;
+}
+
+/* частина 6 */
+.translucent-box {
+  color: hsl(0deg, 100%, 50%);
+}
