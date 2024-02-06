@@ -3,21 +3,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
 }
+
 .license {
   flex-basis: 150px;
 }
 .license__text {
   font-size: calc(var(--fs-main) - 6px);
 }
+.footer__link {
+  display: flex;
+  gap: 45px;
+  font-size: calc(var(--fs-main) - 4px);
+}
 .link__list {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: calc(var(--fs-main) - 4px);
 }
 .list__name {
   font-size: calc(var(--fs-main) - 2px);
   font-weight: 700;
+}
+.exircises__link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.external__link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

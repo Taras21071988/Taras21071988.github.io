@@ -44,10 +44,10 @@ section p {
   color: indigo;
 }
 
-.first a {
+p.first a {
   color: green;
 }
-p .first > a {
+p > .first > a {
   color: red;
   font-size: 1.5em;
 }
@@ -57,5 +57,5 @@ div ~ p {
 
 /* частина 6 */
 .translucent-box {
-  color: hsl(0deg, 100%, 50%);
+  background: hsl(0deg, 100%, 50%);
 }
