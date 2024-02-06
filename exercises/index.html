@@ -6,6 +6,10 @@
     <title>My exercises</title>
     <link rel="stylesheet" href="css/main.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
       rel="shortcut icon"
       type="image/png"
       sizes="32x32"
@@ -22,188 +26,242 @@
       </div>
     </header>
     <main>
-      <section id="lecture">
+      <section class="section__swiper">
         <div class="container">
-          <div class="section__lecture-wrapper">
-            <h2 class="lecture__title">
-              Тут додаватимуться посилання на виконані завдання
-            </h2>
-            <div class="lecture__wrapper">
-              <h2>Оберіть потрібний тиждень</h2>
-              <div class="lecture__week">
-                <div class="lecture__week-item" data-target-id="0">
-                  <div class="week__wrapper">
-                    <h3 class="week__title">Перший тиждень</h3>
-                  </div>
-                </div>
-                <div class="lecture__week-item" data-target-id="1">
-                  <div class="week__wrapper">
-                    <h3 class="week__title">Другий тиждень</h3>
-                  </div>
-                </div>
-                <div class="lecture__week-item" data-target-id="2">
-                  <div class="week__wrapper">
-                    <h3 class="week__title">Третій тиждень</h3>
-                  </div>
-                </div>
-                <div class="lecture__week-item" data-target-id="3">
-                  <div class="week__wrapper">
-                    <h3 class="week__title">Четвертий тиждень</h3>
-                  </div>
-                </div>
-                <div class="lecture__week-item" data-target-id="4">
-                  <div class="week__wrapper">
-                    <h3 class="week__title">П'ятий тиждень</h3>
+          <div class="swiper__title-wrapper">
+            <h2>Оберіть потрібний тиждень</h2>
+            <div class="btn__wrapper">
+              <button class="s-button-prev">&#11164;</button>
+              <button class="s-button-next">&#11166;</button>
+            </div>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide__content">
+                  <div class="lecture__week-item" data-target-id="0">
+                    <div class="week__wrapper">
+                      <h3 class="week__title">Перший тиждень</h3>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="week__content-wrapper">
-                <div class="week__content selected" data-id="0">
-                  <div class="content__item">
-                    <ul class="lecture__list">
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-01/index.html"
-                          >Lection 1</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-02/index.html"
-                          >Lection 2</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-03/index.html"
-                          >Lection 3</a
-                        >
-                      </li>
-                    </ul>
+              <div class="swiper-slide">
+                <div class="slide__content">
+                  <div class="lecture__week-item" data-target-id="1">
+                    <div class="week__wrapper">
+                      <h3 class="week__title">Другий тиждень</h3>
+                    </div>
                   </div>
                 </div>
-                <div class="week__content" data-id="1">
-                  <div class="content__item">
-                    <ul class="lecture__list">
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-04/index.html"
-                          >Lection 4</a
-                        >
-                      </li>
-                      <p>Вибачте, уроки ще не було проведено</p>
-                      <!--
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-05/index.html"
-                          >Lection 5</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-06/index.html"
-                          >Lection 6</a
-                        >
-                      </li> -->
-                    </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide__content">
+                  <div class="lecture__week-item" data-target-id="2">
+                    <div class="week__wrapper">
+                      <h3 class="week__title">Третій тиждень</h3>
+                    </div>
                   </div>
                 </div>
-                <div class="week__content" data-id="2">
-                  <div class="content__item">
-                    <ul class="lecture__list">
-                      <p>Вибачте, уроки ще не було проведено</p>
-                      <!-- <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-07/index.html"
-                          >Lection 7</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-08/index.html"
-                          >Lection 8</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-09/index.html"
-                          >Lection 9</a
-                        >
-                      </li> -->
-                    </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide__content">
+                  <div class="lecture__week-item" data-target-id="3">
+                    <div class="week__wrapper">
+                      <h3 class="week__title">Четвертий тиждень</h3>
+                    </div>
                   </div>
                 </div>
-                <div class="week__content" data-id="3">
-                  <div class="content__item">
-                    <ul class="lecture__list">
-                      <p>Вибачте, уроки ще не було проведено</p>
-                      <!-- <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-10/index.html"
-                          >Lection 10</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-11/index.html"
-                          >Lection 11</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-11/index.html"
-                          >Lection 12</a
-                        >
-                      </li> -->
-                    </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide__content">
+                  <div class="lecture__week-item" data-target-id="4">
+                    <div class="week__wrapper">
+                      <h3 class="week__title">П'ятий тиждень</h3>
+                    </div>
                   </div>
                 </div>
-                <div class="week__content" data-id="4">
-                  <div class="content__item">
-                    <ul class="lecture__list">
-                      <p>Вибачте, уроки ще не було проведено</p>
-                      <!-- <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-01/index.html"
-                          >Lection 13</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-02/index.html"
-                          >Lection 14</a
-                        >
-                      </li>
-                      <li class="lecture__list-item">
-                        <a
-                          class="list__item-link"
-                          href="./lecture-03/index.html"
-                          >Lection 15</a
-                        >
-                      </li> -->
-                    </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide__content">
+                  <div class="lecture__week-item" data-target-id="5">
+                    <div class="week__wrapper">
+                      <h3 class="week__title">Шостий тиждень</h3>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+          <div class="week__content-wrapper">
+            <div class="week__content selected" data-id="0">
+              <div class="content__item">
+                <ul class="lecture__list">
+                  <li class="lecture__list-item">
+                    <a class="list__item-link" href="./lecture-01/index.html"
+                      >Lection 1</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a class="list__item-link" href="./lecture-02/index.html"
+                      >Lection 2</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a class="list__item-link" href="./lecture-03/index.html"
+                      >Lection 3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="week__content" data-id="1">
+              <div class="content__item">
+                <ul class="lecture__list">
+                  <li class="lecture__list-item">
+                    <a class="list__item-link" href="./lecture-04/index.html"
+                      >Lection 4</a
+                    >
+                  </li>
+                  <p>Вибачте, уроки ще не було проведено</p>
+                  <!--
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-05/index.html"
+                      >Lection 5</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-06/index.html"
+                      >Lection 6</a
+                    >
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="week__content" data-id="2">
+              <div class="content__item">
+                <ul class="lecture__list">
+                  <p>Вибачте, уроки ще не було проведено</p>
+                  <!-- <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-07/index.html"
+                      >Lection 7</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-08/index.html"
+                      >Lection 8</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-09/index.html"
+                      >Lection 9</a
+                    >
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="week__content" data-id="3">
+              <div class="content__item">
+                <ul class="lecture__list">
+                  <p>Вибачте, уроки ще не було проведено</p>
+                  <!-- <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-10/index.html"
+                      >Lection 10</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-11/index.html"
+                      >Lection 11</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-11/index.html"
+                      >Lection 12</a
+                    >
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="week__content" data-id="4">
+              <div class="content__item">
+                <ul class="lecture__list">
+                  <p>Вибачте, уроки ще не було проведено</p>
+                  <!-- <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-01/index.html"
+                      >Lection 13</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-02/index.html"
+                      >Lection 14</a
+                    >
+                  </li>
+                  <li class="lecture__list-item">
+                    <a
+                      class="list__item-link"
+                      href="./lecture-03/index.html"
+                      >Lection 15</a
+                    >
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="week__content" data-id="5">
+              <div class="content__item">
+                <ul class="lecture__list">
+                  <p>Вибачте, уроки ще не було проведено</p>
+                  <!-- <li class="lecture__list-item">
+                      <a
+                        class="list__item-link"
+                        href="./lecture-01/index.html"
+                        >Lection 16</a
+                      >
+                    </li>
+                    <li class="lecture__list-item">
+                      <a
+                        class="list__item-link"
+                        href="./lecture-02/index.html"
+                        >Lection 17</a
+                      >
+                    </li>
+                    <li class="lecture__list-item">
+                      <a
+                        class="list__item-link"
+                        href="./lecture-03/index.html"
+                        >Lection 18</a
+                      >
+                    </li> -->
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app/app.js"></script>
   </body>
 </html>
