@@ -27,3 +27,14 @@
     scale: 1;
   }
 }
+
+/* ... */
+@keyframes social {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    color: red;
+    rotate: 360deg;
+  }
+}

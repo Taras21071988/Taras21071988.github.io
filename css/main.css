@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap");
+/* тимчасово закоментував у зв'язку з вимогами до виконання уроків */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap"); */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("reset.css");
 @import url("common.css");
 @import url("animation.css");
@@ -13,12 +15,47 @@ body {
   flex-direction: column;
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--font-main);
+  /* font-family: var(--font-main); */
+  /* внесення змін у зв'язку з вимогами до уроку 5 */
+  font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+  /* ... */
 }
+
 .main {
   flex: auto;
 }
 .footer {
   flex-shrink: 0;
   background-color: var(--bs-color);
+}
+
+/* внесення змін у зв'язку з вимогами до уроку 5 */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.45rem;
+}
+h2 {
+  font-size: 1.3rem;
+}
+
+.footer-social {
+  margin-bottom: 5px;
+}
+/* ... */
+.list-unstyled {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.list-unstyled > li a {
+  font-size: 1.4em;
+}
+.list-unstyled > li a:hover {
+  animation: social 1s forwards;
 }

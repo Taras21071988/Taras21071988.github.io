@@ -3,8 +3,13 @@
   --text-color: #000;
   --text-color-accent: red;
   --bs-color: rgba(0, 0, 0, 0.15);
-  --font-main: "Montserrat", sans-serif;
-  --fs-main: 18px;
+  --font-main: "Roboto", sans-serif;
+  /* --font-main: "Montserrat", sans-serif; */
+  /* --fs-main: 18px; */
+  /* внесення змін у зв'язку з вимогами до уроку 5 */
+  --primary-font-family: "Roboto", sans-serif;
+  --primary-font-size: 0.875rem;
+  /* ... */
 }
 
 [dark] {
@@ -22,7 +27,11 @@ html {
   --primary-text-color: #000;
   --primary-bg-color: #fff;
 }
-
+/* внесення змін у зв'язку з вимогами до уроку 5 */
+a {
+  text-decoration: none;
+}
+/*  */
 footer {
   --footer-text-color: #fff;
   --footer-bg-color: #000;

@@ -1,0 +1,22 @@
+/* Чітко вказав, що font-size дорівнює 16, для того щоб не виникло можливих проблем із різними гаджетами */
+body {
+  font-size: 16px;
+}
+
+/* завдання 3 */
+
+div {
+  font-size: 1.6em;
+}
+span > span {
+  font-size: 1.6em;
+}
+
+/* завдання 4 */
+strong {
+  font-size: 1.6rem;
+}
+/* завдання 5 */
+ul{
+    list-style: square;
+}

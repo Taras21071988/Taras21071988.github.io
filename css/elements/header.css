@@ -64,6 +64,16 @@
   animation: head 1s forwards;
   animation-delay: 1.2s;
 }
+/* ... */
+.users__menu {
+  display: flex;
+  gap: 8px;
+  font-size: 1.2em;
+}
+.users__menu a:hover {
+  animation: social 1s forwards;
+}
+
 /* блок для checkbox  */
 .slider {
   width: 80px;
@@ -84,7 +94,7 @@
   font: 12px/26px var(--font-main);
   font-weight: bold;
 }
-/* font: 12px/26px Arial, sans-serif; - це скорочений запис стандартного опису стилів для тексту, перший блок вказує на розмір тексту/висоту рядка, після якого вже йде назва шрифту */
+/* font: 12px/26px var(--font-main) ; - це скорочений запис стандартного опису стилів для тексту, перший блок вказує на розмір тексту/висоту рядка, після якого вже йде назва шрифту */
 .slider:after {
   content: "OFF";
   color: var(--text-color);
