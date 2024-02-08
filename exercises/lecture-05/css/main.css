@@ -8,7 +8,7 @@ body {
 div {
   font-size: 1.6em;
 }
-span > span {
+span span {
   font-size: 1.6em;
 }
 
@@ -17,6 +17,6 @@ strong {
   font-size: 1.6rem;
 }
 /* завдання 5 */
-ul{
-    list-style: square;
+ul {
+  list-style: square;
 }
