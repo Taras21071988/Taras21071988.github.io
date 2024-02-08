@@ -1,17 +1,19 @@
+const section = document.querySelector("section");
+// поки не зміг розв'язати проблему з тим, щоб не створювати фіксовану кількість елементів
+for (let i = 0; i < 250; i++) {
+  const span = document.createElement("span");
+  section.appendChild(span);
+}
+
 const swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
   slidesPerView: 3,
-  spaceBetween: 30,
   loop: true,
   navigation: {
     nextEl: ".s-button-next",
     prevEl: ".s-button-prev",
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
-
 const tabs = document.querySelectorAll(".lecture__week-item");
 const content = document.querySelectorAll(".week__content");
 

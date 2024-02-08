@@ -1,13 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 a {
   color: inherit;
   text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
 }
 body {
   display: flex;
@@ -69,18 +73,19 @@ section::before {
   border-radius: 10px;
   color: #eee;
 }
-/* .nav__title {
-} */
+
 .nav__link {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 5px;
   font-size: 18px;
-  transition: 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .nav__link:hover {
-  color: #3a3a3a;
-  border: 1px solid #3a3a3a;
+  color: #363636;
+  border: 1px solid transparent;
+  background: linear-gradient(225deg, #5f5f5f, #707070);
+  box-shadow: -10px 10px 20px #565656, 10px -10px 20px #7c7c7c;
 }
 
 section span {
@@ -99,97 +104,174 @@ section span:hover {
   transition: 0s;
 }
 
-section .signin {
-  position: absolute;
-  width: 400px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  border-radius: 4px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-}
-section .signin .content {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 40px;
-}
-section .signin .content h2 {
-  font-size: 2em;
-  color: #eeeeee;
-  text-transform: uppercase;
-}
-section .signin .content .form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-section .signin .content .form .inputBox {
-  position: relative;
-  width: 100%;
-}
-section .signin .content .form .inputBox input {
-  position: relative;
-  width: 100%;
-  background: #333;
-  border: none;
-  outline: none;
-  padding: 25px 10px 7.5px;
-  border-radius: 4px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1em;
-}
-section .signin .content .form .inputBox i {
+.wrapper__swiper {
   position: absolute;
   left: 0;
-  padding: 15px 10px;
-  font-style: normal;
-  color: #aaa;
-  transition: 0.5s;
-  pointer-events: none;
-}
-.signin .content .form .inputBox input:focus ~ i,
-.signin .content .form .inputBox input:valid ~ i {
-  transform: translateY(-7.5px);
-  font-size: 0.8em;
-  color: #fff;
-}
-.signin .content .form .links {
-  position: relative;
-  width: 100%;
+  z-index: 500;
   display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #eee;
+  margin-left: 20px;
+}
+.swiper__title-wrapper {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+
+  display: flex;
+  gap: 35px;
   justify-content: space-between;
+  align-items: center;
 }
-.signin .content .form .links a {
-  color: #fff;
-  text-decoration: none;
+.btn__wrapper {
+  display: flex;
+  gap: 25px;
 }
-.signin .content .form .links a:nth-child(2) {
-  color: #eeeeee;
-  font-weight: 600;
+.s-button-prev,
+.s-button-next {
+  color: inherit;
+  font-size: 16px;
+  background: transparent;
+  padding: 10px 15px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  transition: all 0.5s;
 }
-.signin .content .form .inputBox input[type="submit"] {
-  padding: 10px;
-  background: #eeeeee;
-  color: #000;
-  font-weight: 600;
-  font-size: 1.35em;
-  letter-spacing: 0.05em;
+.s-button-prev:hover,
+.s-button-next:hover {
+  color: #363636;
+  border: 1px solid transparent;
+  background: linear-gradient(225deg, #5f5f5f, #707070);
+  box-shadow: -10px 10px 20px #565656, 10px -10px 20px #7c7c7c;
+}
+.swiper {
+  width: 300px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.swiper-wrapper {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.swiper-slide {
+  height: 100px !important;
+  padding: 25px;
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lecture__week-item {
   cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.5s ease-in-out;
 }
-input[type="submit"]:active {
-  opacity: 0.6;
+.lecture__week-item:hover {
+  color: #363636;
+  border: 1px solid transparent;
+  background: linear-gradient(225deg, #5f5f5f, #707070);
+  box-shadow: -10px 10px 20px #565656, 10px -10px 20px #7c7c7c;
 }
+.swiper-notification {
+  display: none;
+}
+
+.week__content-wrapper {
+  position: absolute;
+  top: 350px;
+  right: 0;
+  z-index: 500;
+  margin-right: 20px;
+  width: 300px;
+  height: 350px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #eee;
+}
+.week__content {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  animation: week 0.5s forwards;
+}
+.week__content.selected {
+  animation: week-check 0.5s forwards;
+  width: 100%;
+  height: 100%;
+}
+.content__item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.lecture__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.list__item-link {
+  font-size: 1.6em;
+  cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.list__item-link:hover {
+  color: #363636;
+  border: 1px solid transparent;
+  background: linear-gradient(225deg, #5f5f5f, #707070);
+  box-shadow: -10px 10px 20px #565656, 10px -10px 20px #7c7c7c;
+}
+@keyframes week-check {
+  from {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes week {
+  from {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  25% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+}
+
 @media (max-width: 900px) {
   section span {
     width: calc(10vw - 2px);
@@ -202,4 +284,3 @@ input[type="submit"]:active {
     height: calc(20vw - 2px);
   }
 }
-/*  */
