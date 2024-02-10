@@ -6,10 +6,15 @@
   --font-main: "Roboto", sans-serif;
   /* --font-main: "Montserrat", sans-serif; */
   /* --fs-main: 18px; */
-  /* внесення змін у зв'язку з вимогами до уроку 5 */
+  
+  /* внесення змін у зв'язку з вимогами до уроку 6 */
+  --primary-text-color: #000;
+  --primary-bg-color: #fff;
   --primary-font-family: "Roboto", sans-serif;
   --primary-font-size: 0.875rem;
   /* ... */
+
+  
 }
 
 [dark] {
@@ -23,10 +28,7 @@
   margin: 0;
   padding: 0;
 }
-html {
-  --primary-text-color: #000;
-  --primary-bg-color: #fff;
-}
+
 /* внесення змін у зв'язку з вимогами до уроку 5 */
 a {
   text-decoration: none;

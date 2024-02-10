@@ -48,7 +48,7 @@ h2 {
 .footer-social {
   margin-bottom: 5px;
 }
-/* ... */
+
 .list-unstyled {
   list-style: none;
   display: flex;
@@ -59,4 +59,22 @@ h2 {
 }
 .list-unstyled > li a:hover {
   animation: social 1s forwards;
+}
+/* внесення змін у зв'язку з вимогами до уроку 6 */
+.text-uppercase {
+  text-transform: uppercase;
+}
+.bg-dark {
+  background-color: black;
+}
+.text-white {
+  color: white;
+}
+.list-unstyled.categories li a {
+  color: indigo;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.list-unstyled.categories li a:hover {
+  background-color: lightgray;
 }

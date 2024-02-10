@@ -21,19 +21,31 @@
   <body>
     <section id="section__modal">
       <div class="modal__bg">
-        <div class="modal__wrapper">
-          <div class="modal__window">
-            <div class="modal__close">
-              <button class="close__btn">Close</button>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
-              odit iure neque illo quisquam, eos exercitationem distinctio
-              consequatur eius harum autem numquam ea quod quibusdam cumque
-              similique velit illum culpa.
-            </p>
+        <!-- <div class="modal__wrapper"> -->
+        <div class="modal__window">
+          <div class="modal__close">
+            <button class="close__btn">Close</button>
           </div>
+          <form class="modal__form" onsubmit>
+            <input
+              id="mail"
+              class="form__inp"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <input
+              id="text"
+              class="form__inp"
+              type="text"
+              placeholder="Specify the essence of your problem"
+            />
+
+            <div class="form__btn">
+              <button class="send__btn">Send</button>
+            </div>
+          </form>
         </div>
+        <!-- </div> -->
       </div>
     </section>
     <header class="header">
@@ -115,17 +127,16 @@
                 <li class="title__item">e</li>
               </ul>
             </ul>
-            <p>
+            <button class="open__modal">Форма для зворотного зв'язку</button>
+            <!-- <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
               tempore ducimus rerum animi architecto impedit, voluptatem
               necessitatibus autem distinctio tempora! Aut consectetur
               architecto cum quaerat minus numquam delectus, nam ipsum.
-            </p>
-            <button class="open__modal">Форма для зворотного зв'язку</button>
+            </p> -->
           </div>
         </div>
       </section>
-      
     </main>
     <footer class="footer">
       <div class="container">

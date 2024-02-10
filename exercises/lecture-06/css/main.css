@@ -1,0 +1,89 @@
+/* частина 2 */
+
+ul li a:link {
+  color: indigo;
+}
+
+ul li a:visited {
+  color: gold;
+}
+
+ul li a:hover {
+  color: salmon;
+}
+/* змінив розташування порядку псевдоелементів, для коректного відображення в умовах завдання */
+ul li a:focus {
+  color: orange;
+}
+
+ul li a:active {
+  color: red;
+}
+/* ... */
+
+/* частина 3 */
+input:in-range {
+  background: rgba(0, 255, 0, 0.25);
+}
+input:out-of-range {
+  background: rgba(255, 2, 2, 0.25);
+}
+/* ... */
+
+/* частина 4 */
+.part__four ul li:first-child {
+  color: orange;
+}
+/* ... */
+
+/* частина 5 */
+.part__five ul :first-of-type {
+  color: orange;
+}
+/* ... */
+
+/* частина  6*/
+.part__six ul :last-of-type {
+  color: orange;
+}
+/* ... */
+
+/* частина  7*/
+.part__seven ul li:not(.first-item) {
+  color: orange;
+}
+.part__seven ul li:not(.first-item):not(:last-of-type) {
+  color: black;
+  background-color: yellow;
+}
+/* ... */
+
+/* частина  8*/
+.part__eight ol :nth-child(2) {
+  color: orange;
+}
+.part__eight ol :nth-child(2n) {
+  color: orange;
+}
+.part__eight ol :nth-child(2n + 6) {
+  color: orange;
+}
+/* ... */
+
+/* частина  9*/
+.part__nine .ua::before {
+  content: "Слава ";
+}
+/* ... */
+
+/* частина  10*/
+.part__ten .hero::after {
+  content: "Слава ";
+}
+/* ... */
+
+/* частина  11*/
+.part__eleven .cont::before{
+    content: "\0A7";
+}
+/* ... */
