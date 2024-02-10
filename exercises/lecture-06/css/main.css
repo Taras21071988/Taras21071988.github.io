@@ -78,7 +78,7 @@ input:out-of-range {
 
 /* частина  10*/
 .part__ten .hero::after {
-  content: "Слава ";
+  content: " Слава";
 }
 /* ... */
 
