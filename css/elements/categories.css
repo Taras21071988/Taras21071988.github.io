@@ -29,3 +29,20 @@ aside {
   display: flex;
   flex-direction: column;
 }
+.product__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.product__content {
+  display: flex;
+  justify-content: space-between;
+}
+.product__item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid var(--text-color);
+  border-radius: 12px;
+}
