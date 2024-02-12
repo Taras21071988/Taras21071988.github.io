@@ -27,6 +27,7 @@
             <button class="close__btn">Close</button>
           </div>
           <form class="modal__form" onsubmit>
+            <h2 class="form__title">Fill in the feedback fields</h2>
             <input
               id="mail"
               class="form__inp"
@@ -38,10 +39,19 @@
               class="form__inp"
               type="text"
               placeholder="Specify the essence of your problem"
+              maxlength="200"
             />
 
             <div class="form__btn">
-              <button class="send__btn">Send</button>
+              <button class="send__btn" disabled>Send</button>
+            </div>
+            <div class="private__polis">
+              <label>
+                <input class="private__check" id="checkPolis" type="checkbox" />
+
+                By submitting the form you agree to the user agreement, which
+                unfortunately I haven't made up yet
+              </label>
             </div>
           </form>
         </div>
@@ -128,6 +138,7 @@
               </ul>
             </ul>
             <button class="open__modal">Форма для зворотного зв'язку</button>
+
             <!-- <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
               tempore ducimus rerum animi architecto impedit, voluptatem
