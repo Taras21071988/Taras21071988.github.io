@@ -22,6 +22,7 @@
     #0000ff 100%,
     #00004b 150%
   );
+
 }
 .radial {
   background: radial-gradient(ellipse at top, orange, transparent),
