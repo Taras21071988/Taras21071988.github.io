@@ -4,9 +4,21 @@ let products = [
   {
     category: "Women's T-Shirts",
     items: [
-      { name: "Red Women's T-Shirt", price: 20 },
-      { name: "Blue Women's T-Shirt", price: 25 },
-      { name: "Green Women's T-Shirt", price: 22 },
+      {
+        name: "Red Women's T-Shirt",
+        price: 20,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere tempore ducimus rerum animi architecto impedit, voluptatemnecessitatibus autem distinctio tempora! Aut consectetur architecto cum quaerat minus numquam delectus, nam ipsum.",
+      },
+      {
+        name: "Blue Women's T-Shirt",
+        price: 25,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere tempore ducimus rerum animi architecto impedit, voluptatem necessitatibus autem distinctio tempora! Aut consectetur architecto cum quaerat minus numquam delectus, nam ipsum.",
+      },
+      {
+        name: "Green Women's T-Shirt",
+        price: 22,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere tempore ducimus rerum animi architecto impedit, voluptatemnecessitatibus autem distinctio tempora! Aut consectetur architecto cum quaerat minus numquam delectus, nam ipsum.",
+      },
     ],
   },
   {
@@ -69,13 +81,28 @@ function handleItemClick(categoryName) {
     selectedCategory.items.forEach((item) => {
       let itemInfo = document.createElement("div");
       itemInfo.classList.add("product__item");
+
       let itemTitle = document.createElement("h3");
+      itemTitle.classList.add("item__title");
       itemTitle.textContent = item.name;
+
       let itemPrice = document.createElement("p");
+      itemPrice.classList.add("item__price");
       itemPrice.textContent = " Цена: $" + item.price;
+
+      let itemText = document.createElement("p");
+      itemText.classList.add("item__text");
+      itemText.textContent = item.text;
+
+      let itemBtn = document.createElement("button");
+      itemBtn.classList.add("item__btn-buy");
+      itemBtn.textContent = "Buy";
 
       itemInfo.appendChild(itemTitle);
       itemInfo.appendChild(itemPrice);
+      itemInfo.appendChild(itemText);
+
+      itemInfo.appendChild(itemBtn);
       productInfo.appendChild(productContent);
       productContent.appendChild(itemInfo);
     });
