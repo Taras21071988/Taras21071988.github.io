@@ -1,0 +1,30 @@
+/* завдання 1 */
+.percents {
+  background: linear-gradient(
+    to bottom,
+    #88ff00 2em,
+    #94e945 4em,
+    #296303 8em,
+    #284610 16em,
+    #24330d 32em,
+    #0c1206 64em,
+    #0b180c 128em
+  );
+  /* збільшив висоту елемента для коректнішого відображення того що вказали в умові */
+  height: 200px;
+}
+.negative {
+  background: linear-gradient(
+    to left,
+    #00bfff -50%,
+    #25a9ad -10%,
+    #436fe9 0%,
+    #0000ff 100%,
+    #00004b 150%
+  );
+}
+.radial {
+  background: radial-gradient(ellipse at top, orange, transparent),
+    radial-gradient(ellipse at bottom, red, transparent);
+}
+/*  */
