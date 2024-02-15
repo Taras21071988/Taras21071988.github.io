@@ -74,6 +74,15 @@ section::before {
   color: #eee;
 }
 
+.admin__btn {
+  cursor: pointer;
+  color: inherit;
+  background: transparent;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 18px;
+}
 .nav__link {
   border: 1px solid #eee;
   border-radius: 10px;
