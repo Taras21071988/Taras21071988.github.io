@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lecture #8</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+
+    <style>
+      .box {
+        /* завдання 1 */
+        /* padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 25px;
+        padding-left: 20px; */
+
+        padding: 10px 20px 25px 20px;
+        /* так само можна записати так
+            padding: 10px 20px 25px;
+        */
+
+        /* margin-top: 25px;
+        margin-right: 20px;
+        margin-bottom: 25px;
+        margin-left: 20px; */
+
+        margin: 25px 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <p>homework</p>
+      <hr />
+      <a href="../index.html">Повернутися до сторінки вибору лекцій</a><br />
+      <a href="/index.html">Повернутися на головну</a>
+    </header>
+
+    <!-- завдання 2 -->
+    <div class="box">
+      <!-- ширина дорівнюватиме 324px
+        x = w+(p*2)+(b*2)
+    --></div>
+    <!-- ... -->
+
+    <!-- завдання 3 -->
+
+    <div class="first-box">
+      <!-- 
+            ширина дорівнюватиме 256px
+            висота дорівнюватиме 156px
+            формула для розрахунку буде така сама як і в завданні 1
+         -->
+    </div>
+
+    <!-- ... -->
+
+    <!-- завдання 4 -->
+
+    <div class="second-box">
+      <!-- 
+            оскільки padding не вказані, за замовчуванням вважатимемо їх рівними 0
+            y = h+(b*2)
+            x = w+(b*2)
+             ширина дорівнюватиме 216px
+             висота дорівнюватиме 116px
+         -->
+    </div>
+
+    <!-- ... -->
+
+    <!-- завдання 5 -->
+    <!--
+        x = w+(p*2)+(b*2)
+        ширина дорівнюватиме 256px
+        div{
+            box-sizing:content-box;
+            width: 200px;
+            border: 8px solid blue;
+            padding: 20px;
+            background: yellow;
+            }
+     -->
+    <!-- ... -->
+
+    <!-- завдання 6 -->
+
+    <!--
+        ширина контенту елемента div дорівнює 144px
+        рахуємо за формулою:
+        x = w-((p*2)+(b*2))
+        під час розрахунку з урахуванням border-box ширина елемента містить у собі ширину і padding, і border, і тому для розрахунку ширини контенту в елементі потрібно відняти padding & border
+        div{
+            box-sizing:border-box;
+            width: 200px;
+            border: 8px solid blue;
+            padding: 20px;
+            background: yellow;
+            }
+     -->
+    <!-- ... -->
+
+    <!-- завдання 7 -->
+    <!-- для кращої видимості обгорнув у section -->
+    <section class="seven">
+      <div id="example1">
+        <p>
+          Правило для example1: фон всередині елемента має простягатися за межі
+          рамки.
+        </p>
+      </div>
+
+      <div id="example2">
+        <p>
+          Правило для example2: фон всередині елемента має простягатися до
+          внутрішнього краю рамки.
+        </p>
+      </div>
+
+      <div id="example3">
+        <p>
+          Правило для example3: фон всередині елемента має простягатися до краю
+          поля вмісту.
+        </p>
+      </div>
+    </section>
+    <!-- ... -->
+
+    <!-- завдання 8 -->
+    <h1><span>Awesome article</span></h1>
+    <!-- ... -->
+    
+  </body>
+</html>
