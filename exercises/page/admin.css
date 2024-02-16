@@ -1,0 +1,16 @@
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  padding: 20px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 24px;
+}

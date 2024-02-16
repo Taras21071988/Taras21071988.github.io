@@ -314,8 +314,8 @@ section span:hover {
   top: 50%;
   left: 50%;
   padding: 100px 25px 25px 25px;
-  width: 400px;
-  height: 400px;
+  width: calc(20vw + 1px);
+  height: calc(40vh + 1px);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
@@ -331,4 +331,30 @@ section span:hover {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.close__btn,
+.send__btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: transparent;
+  color: #eee;
+  border: 1px solid #eee;
+}
+.form__title {
+  color: #eee;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.form__inp {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  color: var(--text-color);
+  background-color: transparent;
 }
