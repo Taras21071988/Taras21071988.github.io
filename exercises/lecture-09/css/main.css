@@ -1,0 +1,56 @@
+/* завдання 2 */
+#two {
+  position: relative;
+  margin-bottom: 200px;
+  /*  
+  зробив тут relative, для більш коректного відображення елемента з position:absolute
+  також "штовхнув" наступну за ним секцію для коректнішого відображення
+  */
+}
+
+#two p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+  z-index: 1000; /* якщо малося на увазі стек по осі z,а ще можна було б зробити секцію флексом, і order - змінити порядок відображення, вибравши для нього місце*/
+}
+
+.static-position {
+  background: yellow;
+  position: static; /*<- можна було не вказувати, оскільки використовується за замовчуванням*/
+}
+
+.relative-position {
+  position: relative;
+  background: red;
+  top: 130px;
+  left: 130px;
+  width: calc(100% - 130px);
+  /* трохи обмежив ширину, щоб позбутися смуги скролу, не втративши при цьому контент */
+}
+/* ... */
+
+/* завдання 3 */
+h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  text-align: center;
+  /* тут відбувається перекриття першого параграфа, можливо так і було задумано */
+}
+/* ... */
+
+/* завдання 4 */
+dt {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 1em 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+/* ... */
