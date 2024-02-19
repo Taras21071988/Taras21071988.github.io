@@ -3,7 +3,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("reset.css");
 @import url("common.css");
-@import url('presets.css');
+@import url("presets.css");
 @import url("animation.css");
 @import url("elements/header.css");
 @import url("elements/descr.css");
@@ -53,8 +53,6 @@ h2 {
 
 .list-unstyled {
   list-style: none;
-  display: flex;
-  gap: 10px;
 }
 .list-unstyled > li a {
   font-size: 1.4em;
