@@ -1,0 +1,27 @@
+.df {
+  display: flex;
+}
+.df-dc {
+  display: flex;
+  flex-direction: column;
+}
+.df-dr {
+  display: flex;
+  flex-direction: row;
+}
+.ai-c {
+  align-items: center;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+
+.tt-u {
+  text-transform: uppercase;
+}
+.gp-1 {
+  gap: 10px;
+}
+.gp-2 {
+  gap: 20px;
+}
