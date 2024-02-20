@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>lecture #10 Flexbox</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+
+    <style>
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 700px;
+      }
+
+      .item-blue {
+        background-color: blue;
+        flex-grow: 3;
+        /* width - 400px */
+      }
+      .item-orange {
+        background-color: orange;
+        /* width - 100px  */
+      }
+      .item-green {
+        background-color: green;
+        flex-grow: 1;
+        /* width - 200px  */
+      }
+
+      .item {
+        color: white;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS Flex Property</h2>
+    <div class="wrapper">
+      <div class="item item-blue">CSS</div>
+      <div class="item item-orange">Flex</div>
+      <div class="item item-green">Property</div>
+    </div>
+    <section>
+      <p>homework</p>
+      <hr />
+      <a href="../index.html">Повернутися до сторінки вибору лекцій</a><br />
+      <a href="/index.html">Повернутися на головну</a><br />
+      <a href="navbar/index.html">Navbar</a><br />
+      <a href="layout/index.html">Layout</a>
+    </section>
+  </body>
+</html>
