@@ -256,7 +256,7 @@ section span:hover {
 }
 @keyframes week-check {
   from {
-    transform: translateX(-200%);
+    transform: translateX(-800%);
     opacity: 0;
   }
   75% {
@@ -277,7 +277,7 @@ section span:hover {
   }
   to {
     opacity: 0;
-    transform: translateX(-200%);
+    transform: translateX(-800%);
   }
 }
 

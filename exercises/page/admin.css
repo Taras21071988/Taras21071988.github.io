@@ -9,8 +9,51 @@
   display: flex;
   gap: 50px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__title {
   font-size: 24px;
+}
+.admin__title {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#lectureInputs {
+  width: 100%;
+  display: grid;
+  justify-items: start;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: 50px;
+  gap: 10px;
+}
+.lecture__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lecture__label {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+.lecture__input {
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
+#saveButton,
+.exit__btn {
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 20vw;
+  cursor: pointer;
+}
+.section__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  align-items: center;
 }
