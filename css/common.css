@@ -3,18 +3,17 @@
   --text-color: #000;
   --text-color-accent: red;
   --bs-color: rgba(0, 0, 0, 0.15);
-  --font-main: "Roboto", sans-serif;
-  /* --font-main: "Montserrat", sans-serif; */
-  /* --fs-main: 18px; */
-  
+  /* --font-main: "Roboto", sans-serif; */
+  --font-main: "Montserrat", sans-serif;
+  --fs-main: 16px;
+  --mar-top: 300px;
+
   /* внесення змін у зв'язку з вимогами до уроку 6 */
-  --primary-text-color: #000;
+  /* --primary-text-color: #000;
   --primary-bg-color: #fff;
   --primary-font-family: "Roboto", sans-serif;
-  --primary-font-size: 0.875rem;
+  --primary-font-size: 0.875rem; */
   /* ... */
-
-  
 }
 
 [dark] {
@@ -42,4 +41,14 @@ footer {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  :root {
+    --fs-main: 14px;
+  }
+}
+@media (max-width: 820px) {
+  :root {
+    --fs-main: 12px;
+  }
 }
