@@ -149,6 +149,14 @@
     z-index: 10000;
   }
   .nav__menu.actived {
+    animation: men 1s forwards;
+  }
+}
+@keyframes men {
+  from {
+    left: -1000px;
+  }
+  to {
     left: 0;
   }
 }
