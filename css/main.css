@@ -28,6 +28,10 @@ body {
 
 .main {
   flex: auto;
+  transition: margin-top 0.5s ease;
+}
+.main.active {
+  margin-top: calc(var(--nav-h) - var(--header-h) + 10px);
 }
 .footer {
   flex-shrink: 0;

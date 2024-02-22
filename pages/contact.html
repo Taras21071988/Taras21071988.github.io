@@ -60,7 +60,7 @@
     </section>
     <header class="header">
       <div class="container">
-        <div class="header__wrapper df-dr ai-c jc-sb">
+        <div class="header__wrapper df-dr ai-c jc-sb gp-1">
           <!-- Використовую код svg для можливості зміни кольору при перемиканні теми -->
           <div class="logo__wrapper df ai-c gp-1">
             <div style="width: 50px">
@@ -100,19 +100,25 @@
               <a class="fa-solid fa-user" href="#"></a>
             </div>
             <!-- ... -->
+          </nav>
+          <div class="media__btn-wrapper">
+            <span class="media__btn"></span>
+            <span class="media__btn"></span>
+            <span class="media__btn"></span>
+          </div>
+          <div class="slider__wrapper">
             <div class="slider">
               <input
                 class="header__inp"
                 type="checkbox"
-                value="None"
                 id="slider"
                 name="check"
                 onchange="changeTheme(this.checked)"
               />
               <label class="label__header" for="slider"></label>
             </div>
-            <p>Dark Theme</p>
-          </nav>
+            <p class="title__dark">Dark Theme</p>
+          </div>
         </div>
       </div>
     </header>

@@ -28,6 +28,9 @@ let li = document.querySelectorAll(".title__item");
 for (let i = 0, len = li.length; i < len; i++) {
   li[i].style.animationDelay = i / 10.333 + "s";
 }
+
 mediaBtn.addEventListener("click", function () {
   navMenu.classList.toggle("actived");
+  let mainElement = document.querySelector(".main");
+  mainElement.classList.toggle("active", navMenu.classList.contains("actived"));
 });
