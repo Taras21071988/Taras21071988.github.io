@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dg {
+  display: grid;
+}
+.gtc-4-50 {
+  grid-template-columns: repeat(4, 50px);
+}
+.gtc-a2 {
+  grid-template-columns: repeat(2, auto);
+}
+.one {
+  grid-template-columns: 15% 60% 25%;
+}
+.two {
+  grid-template-rows: 95px 1fr 70px;
+}
+.three {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 90px 300px 1fr;
+}
+.four {
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+.five {
+  justify-content: end;
+}
+.six {
+  justify-content: space-between;
+}
+.seven {
+  justify-content: space-around;
+}
+.eight {
+  justify-content: space-evenly;
+}
+.nine {
+  place-items: stretch;
+}
+.ten {
+  justify-items: start;
+}
+.eleven {
+  justify-items: center;
+}
+.twelve {
+  display: grid;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}

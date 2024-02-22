@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lecture №11 - Модуль Grid</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+
+    <style>
+      main div:nth-of-type(1) {
+        background-color: #c9316b;
+      }
+      main div:nth-of-type(2) {
+        background-color: #c9319e;
+        grid-column: 2;
+      }
+      main div:nth-of-type(3) {
+        background-color: #c231c9;
+      }
+      main div:nth-of-type(4) {
+        background-color: #8f31c9;
+      }
+      main div:nth-of-type(5) {
+        background-color: #5c31c9;
+      }
+      main div:nth-of-type(6) {
+        background-color: #3138c9;
+      }
+      main div:nth-of-type(7) {
+        background-color: #316bc9;
+      }
+      main div:nth-of-type(8) {
+        background-color: #319ec9;
+      }
+      main div:nth-of-type(9) {
+        background-color: #31c9c2;
+      }
+      main div:nth-of-type(10) {
+        background-color: #31c98f;
+      }
+      main div:nth-of-type(11) {
+        background-color: #31c95c;
+      }
+      main div:nth-of-type(12) {
+        background-color: #38c931;
+      }
+
+      main {
+        margin: 2vw 0;
+      }
+
+      main div {
+        color: #fff;
+        padding: 5vh;
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Grid Layout</h1>
+    </header>
+
+    <main>
+      <div class="one dg">
+        <div class="container__one1">1</div>
+        <div class="container__one2"></div>
+        <div class="container__one3"></div>
+      </div>
+      <div class="two dg">
+        <div class="container__two1">2</div>
+        <div class="container__two2"></div>
+        <div class="container__two3"></div>
+        <!-- тут іде перетин із властивостями, які вказані в style  -->
+      </div>
+      <div class="three dg">
+        <div class="container__three1">3</div>
+        <div class="container__three2"></div>
+        <div class="container__three3"></div>
+        <div class="container__three4"></div>
+        <div class="container__three5"></div>
+        <div class="container__three6"></div>
+        <div class="container__three7"></div>
+        <div class="container__three8"></div>
+        <div class="container__three9"></div>
+        <div class="container__three10"></div>
+        <div class="container__three11"></div>
+        <div class="container__three12"></div>
+      </div>
+      <div class="four dg">
+        <div class="container__four1">4</div>
+        <div class="container__four2"></div>
+        <div class="container__four3"></div>
+        <div class="container__four4"></div>
+      </div>
+      <div class="five dg gtc-4-50">
+        <div class="container__five1">5</div>
+        <div class="container__five2"></div>
+        <div class="container__five3"></div>
+        <div class="container__five4"></div>
+      </div>
+      <div class="six dg gtc-4-50">
+        <div class="container__six">6</div>
+        <div class="container__six"></div>
+        <div class="container__six"></div>
+        <div class="container__six"></div>
+      </div>
+      <div class="seven dg gtc-4-50">
+        <div class="container__seven1">7</div>
+        <div class="container__seven2"></div>
+        <div class="container__seven3"></div>
+        <div class="container__seven4"></div>
+      </div>
+      <div class="eight dg gtc-4-50">
+        <div class="container__eight1">8</div>
+        <div class="container__eight2"></div>
+        <div class="container__eight3"></div>
+        <div class="container__eight4"></div>
+      </div>
+      <div class="nine dg gtc-a2">
+        <div class="container__nine1">9</div>
+        <div class="container__nine2"></div>
+      </div>
+      <div class="ten dg gtc-a2">
+        <div class="container__ten1">10</div>
+        <div class="container__ten2"></div>
+      </div>
+      <div class="eleven dg gtc-a2">
+        <div class="container__eleven1">11</div>
+        <div class="container__eleven2"></div>
+      </div>
+      <div class="twelve dg gtc-a2">
+        <div class="container__twelve1">12</div>
+        <div class="container__twelve2"></div>
+      </div>
+    </main>
+  </body>
+</html>

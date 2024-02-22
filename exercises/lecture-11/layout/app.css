@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas:
+    "h h h"
+    "m m s"
+    "f f f";
+}
+.header {
+  grid-area: h;
+}
+.main {
+  grid-area: m;
+}
+.sidebar {
+  grid-area: s;
+}
+.footer {
+  grid-area: f;
+}
