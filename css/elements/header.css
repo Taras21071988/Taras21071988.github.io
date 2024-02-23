@@ -147,10 +147,28 @@
     padding: 20px 100px;
     flex-direction: column;
     z-index: 10000;
+    box-shadow: 0px 10px 40px 0px var(--bs-color);
   }
   .nav__menu.actived {
     animation: men 1s forwards;
-   
+  }
+}
+@media (max-width: 420px) {
+  .logo__title {
+    display: none;
+  }
+  .nav__menu {
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 420px) {
+  .header__wrapper {
+    gap: 20px;
+  }
+}
+@media (max-width: 220px) {
+  .nav__menu {
+    padding: 10px 10px;
   }
 }
 @keyframes men {

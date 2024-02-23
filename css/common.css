@@ -54,3 +54,13 @@ footer {
     --fs-main: 12px;
   }
 }
+@media (max-width: 620px) {
+  :root {
+    --fs-main: 10px;
+  }
+}
+@media (max-width: 420px) {
+  :root {
+    --fs-main: 8px;
+  }
+}

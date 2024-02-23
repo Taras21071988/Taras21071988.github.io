@@ -18,3 +18,25 @@
   font-size: calc(var(--fs-main) - 2px);
   font-weight: 700;
 }
+@media (max-width: 620px) {
+  .footer__wrapper {
+    justify-content: space-around;
+    padding: 10px 0;
+    gap: 10px;
+  }
+  .license__text {
+    font-size: 0.675em;
+  }
+  .footer__link {
+    gap: 25px;
+    font-size: 1.2em;
+  }
+  .list-unstyled {
+    justify-content: center;
+  }
+}
+@media (max-width: 420px) {
+  .footer__link {
+    gap: 10px;
+  }
+}

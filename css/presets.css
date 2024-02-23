@@ -25,3 +25,13 @@
 .gp-2 {
   gap: 20px;
 }
+@media (max-width: 620px) {
+  .gp-1 {
+    gap: 5px;
+  }
+}
+/* @media (max-width: 420px) {
+  .gp-1 {
+    gap: 1px;
+  }
+} */
