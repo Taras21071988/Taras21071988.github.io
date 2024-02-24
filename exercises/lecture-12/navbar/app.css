@@ -63,6 +63,7 @@ nav {
 .logo {
   align-self: center; /* Додав для більш естетичного вигляду під час адаптації */
   grid-column: 1/1;
+  margin-right: 10vw;
 }
 
 .toolbar {
