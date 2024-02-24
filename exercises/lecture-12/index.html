@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dynamic font-size</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Для правильности работы добавил строку которая отсутствовала в условии -->
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        color: #000;
+        background: #fff;
+        font-family: Arial, sans-serif;
+        padding: 1em;
+      }
+      /*Робив стилі для body, для того щоб застосувалися до всіх текстів на сторінці*/
+      @media (min-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+        @media (min-width: 768px) and (max-width: 1920px) {
+          body {
+            font-size: clamp(
+              20px,
+              calc(20px + (36 - 20) * ((100vw - 768px) / (1920 - 768))),
+              36px
+            );
+          }
+        }
+
+        @media (min-width: 1921px) {
+          body {
+            font-size: 48px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body translate="no">
+    <section style="margin-bottom: 100px">
+      <p>homework</p>
+      <hr />
+      <a href="../index.html">Повернутися до сторінки вибору лекцій</a><br />
+      <a href="/index.html">Повернутися на головну</a><br />
+      <a href="grid-areas/index.html">grid</a><br />
+      <a href="navbar/index.html">navbar</a>
+    </section>
+
+    <p>
+      This text has a font size of 16px when the viewport width is less than
+      768px, scales proportionally between 768px and 1920px, and stops scaling
+      at 36px for viewport widths greater than 1920px.
+    </p>
+  </body>
+</html>

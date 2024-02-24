@@ -1,0 +1,74 @@
+/* .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+} */
+/* Для того щоб зробити "Mobile First", то слід трохи переробити вхідні дані,а якщо не спиратися на "Mobile First" то матиме такий вигляд
+
+@media (max-width: 786px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'main'
+            'sidebar'
+            'footer';
+    }
+
+    .header, .main, .sidebar, .footer {
+        grid-area: unset;
+    }
+}
+*/
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media (min-width: 786px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header"
+      "sidebar main main"
+      "footer footer footer";
+  }
+}
