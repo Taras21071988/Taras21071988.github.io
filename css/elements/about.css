@@ -1,0 +1,31 @@
+.about__list {
+  max-width: 150px;
+  text-align: center;
+}
+.about__list-item {
+  font-size: 1rem;
+  line-height: 1rem;
+  transition: all 0.3s ease-in;
+  list-style: disc;
+}
+.about__list-item:hover {
+  font-size: 1.5em;
+  color: var(--text-color-accent);
+}
+.section__one-img {
+  float: left;
+  margin-right: 1rem;
+}
+.section__two-img {
+  float: right;
+}
+.section__three-img {
+  float: right;
+  padding: 1em;
+}
+.section__text {
+  font-size: clamp(0.675rem, 1.4vw, 2.2rem);
+}
+.section__text::first-letter {
+  initial-letter: 2 1;
+}
