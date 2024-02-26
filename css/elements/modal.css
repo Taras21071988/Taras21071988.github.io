@@ -62,7 +62,7 @@
   justify-content: space-around;
 }
 .send__btn[disabled] {
-  filter: brightness(50%);
+  filter: var(--filter);
 }
 @media (min-width: 820px) {
   .modal__window {
