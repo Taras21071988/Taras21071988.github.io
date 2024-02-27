@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+table {
+  width: 50rem;
+  border-collapse: collapse;
+  margin: 3rem auto;
+}
+table tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+th {
+  background-color: indigo;
+  color: white;
+  font-weight: 500;
+}
+
+td,
+th {
+  padding: 0.625rem;
+  border: 1px solid lightgray;
+  text-align: left;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 50rem) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    border: 1px solid darkgrey;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid lightgray;
+  }
+}
