@@ -38,3 +38,19 @@
     rotate: 360deg;
   }
 }
+
+@keyframes extension {
+  from {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    font-size: 0.5em;
+    font-weight: 00;
+  }
+  to {
+    letter-spacing: 0.275em;
+    opacity: 1;
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
+
