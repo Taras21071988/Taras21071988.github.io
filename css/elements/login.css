@@ -1,0 +1,23 @@
+.form__wrapper {
+  width: 100%;
+}
+.login__form {
+  margin: 0 auto;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 10px 25px;
+  box-shadow: 0px 10px 40px 0px var(--bs-color);
+}
+.inp {
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid var(--bs-color);
+  border-radius: 12px;
+  padding: 10px 25px;
+}
+.btn__wrapper {
+  padding: 5px 10px;
+}
+.btn {
+  margin-bottom: 45px;
+}

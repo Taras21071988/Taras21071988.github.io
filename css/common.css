@@ -48,6 +48,15 @@ footer {
   padding: 0 10px;
   margin: 0 auto;
 }
+.btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+}
 @media (max-width: 1000px) {
   :root {
     --fs-main: 14px;
