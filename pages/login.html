@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./../css/main.css" />
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="../css/main.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -19,45 +13,6 @@
     />
   </head>
   <body>
-    <section id="section__modal">
-      <div class="modal__bg">
-        <!-- <div class="modal__wrapper"> -->
-        <div class="modal__window">
-          <div class="modal__close">
-            <button class="close__btn">Close</button>
-          </div>
-          <form class="modal__form" onsubmit>
-            <h2 class="form__title">Fill in the feedback fields</h2>
-            <input
-              id="mail"
-              class="form__inp"
-              type="email"
-              placeholder="Enter your email"
-            />
-            <input
-              id="text"
-              class="form__inp"
-              type="text"
-              placeholder="Specify the essence of your problem"
-              maxlength="200"
-            />
-
-            <div class="form__btn">
-              <button class="send__btn" disabled>Send</button>
-            </div>
-            <div class="private__polis">
-              <label>
-                <input class="private__check" id="checkPolis" type="checkbox" />
-
-                By submitting the form you agree to the user agreement, which
-                unfortunately I haven't made up yet
-              </label>
-            </div>
-          </form>
-        </div>
-        <!-- </div> -->
-      </div>
-    </section>
     <header class="header">
       <div class="container">
         <div class="header__wrapper df-dr ai-c jc-sb gp-1">
@@ -92,12 +47,12 @@
             <a class="menu__home" href="../index.html">Home</a>
             <a class="menu__about" href="about.html">About</a>
             <a class="menu__catalog" href="catalog.html">Catalog</a>
-            <a class="menu__contact active__menu" href="#">Contact</a>
+            <a class="menu__contact" href="contact.html">Contact</a>
             <!-- завдання 11 -->
             <div class="users__menu df gp-1">
               <a class="fa-solid fa-heart" href="#"></a>
               <a class="fa-solid fa-basket-shopping" href="cart.html"></a>
-              <a class="fa-solid fa-user" href="login.html"></a>
+              <a class="fa-solid fa-user active__menu" href="#"></a>
             </div>
             <!-- ... -->
           </nav>
@@ -123,37 +78,7 @@
       </div>
     </header>
     <main class="main">
-      <section id="descr">
-        <div class="container">
-          <div class="descr__wrapper">
-            <ul class="descr__title df tt-u">
-              <ul class="descr__title-item df-dr">
-                <li class="title__item">c</li>
-                <li class="title__item">o</li>
-                <li class="title__item">n</li>
-                <li class="title__item">t</li>
-                <li class="title__item">a</li>
-                <li class="title__item">c</li>
-                <li class="title__item">t</li>
-              </ul>
-              <ul class="descr__title-item df-dr">
-                <li class="title__item">p</li>
-                <li class="title__item">a</li>
-                <li class="title__item">g</li>
-                <li class="title__item">e</li>
-              </ul>
-            </ul>
-            <button class="open__modal">Форма для зворотного зв'язку</button>
-
-            <!-- <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-              tempore ducimus rerum animi architecto impedit, voluptatem
-              necessitatibus autem distinctio tempora! Aut consectetur
-              architecto cum quaerat minus numquam delectus, nam ipsum.
-            </p> -->
-          </div>
-        </div>
-      </section>
+      <div class="container"></div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -201,6 +126,5 @@
       </div>
     </footer>
     <script src="../app/app.js"></script>
-    <script src="../app/modal.js"></script>
   </body>
 </html>

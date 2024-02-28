@@ -31,11 +31,13 @@
 /* ... */
 @keyframes social {
   from {
+    transform: scale(1);
     rotate: 0deg;
   }
   to {
     color: red;
     rotate: 360deg;
+    transform: scale(1.3);
   }
 }
 
@@ -53,4 +55,3 @@
     font-weight: 700;
   }
 }
-
