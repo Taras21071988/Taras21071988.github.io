@@ -17,7 +17,26 @@
 }
 .btn__wrapper {
   padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
 }
 .btn {
-  margin-bottom: 45px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 1;
+}
+.btn__text {
+  font-size: 0.6em;
+}
+.btn__text span {
+  filter: brightness(50%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn__text span:hover {
+  font-size: 0.675rem;
 }
