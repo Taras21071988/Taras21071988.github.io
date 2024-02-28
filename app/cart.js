@@ -1,8 +1,8 @@
 let products = [
-  { name: "Продукт 1", price: 10, quantity: 2 },
-  { name: "Продукт 2", price: 20, quantity: 1 },
-  { name: "Продукт 3", price: 15, quantity: 3 },
-  { name: "Продукт 4", price: 25, quantity: 4 },
+  { name: "Product 1", price: 10, quantity: 2 },
+  { name: "Product 2", price: 20, quantity: 1 },
+  { name: "Product 3", price: 15, quantity: 3 },
+  { name: "Product 4", price: 25, quantity: 4 },
 ];
 let tableWrapper = document.getElementById("table__wrapper");
 
