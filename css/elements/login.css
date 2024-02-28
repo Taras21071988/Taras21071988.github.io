@@ -33,6 +33,7 @@
   font-size: 0.6em;
 }
 .btn__text span {
+  color: var(--text-color-accent);
   filter: brightness(50%);
   cursor: pointer;
   transition: all 0.3s;
