@@ -41,3 +41,6 @@
 .btn__text span:hover {
   font-size: 0.675rem;
 }
+.logined {
+  text-align: center;
+}

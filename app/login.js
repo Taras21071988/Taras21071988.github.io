@@ -1,5 +1,16 @@
 let formWrapper = document.querySelector(".form__wrapper");
 
+const user = {
+  log: "user",
+  pass: "user",
+};
+function logined() {
+  formWrapper.innerHTML = "";
+  formWrapper.innerHTML = `
+    <h2 class="logined"> Вы успешно авторизировались</h2>
+  `;
+}
+
 function loginForm() {
   formWrapper.innerHTML = `
   <form class="login__form df-dc gp-2">
@@ -41,6 +52,23 @@ function loginForm() {
   const switchLogin = document.querySelector(".switch__register");
   switchLogin.addEventListener("click", function () {
     registerForm();
+  });
+  const loginInp = document.getElementById("name__login");
+  const passwordInp = document.getElementById("password");
+  const sendLogin = document.querySelector(".btn__send");
+  sendLogin.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!loginInp.value || !passwordInp.value) {
+      alert("Не все поля заполненны");
+    } else {
+      if (loginInp.value === user.log && passwordInp.value === user.pass) {
+        localStorage.setItem("user", "logined");
+        logined();
+        console.log("Удачно");
+      } else {
+        alert("Неверный логин или пароль.");
+      }
+    }
   });
 }
 loginForm();
@@ -87,3 +115,12 @@ function registerForm() {
     loginForm();
   });
 }
+function entry() {
+  if (localStorage.getItem("user")) {
+    formWrapper.innerHTML = "";
+    logined();
+  } else {
+    loginForm();
+  }
+}
+entry();
