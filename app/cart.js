@@ -1,3 +1,7 @@
+const userName = document.querySelector(".user__name");
+let nameUser = localStorage.getItem("name");
+userName.innerHTML = `Ваши товары ${nameUser}`;
+
 let products = [
   { name: "Product 1", price: 10, quantity: 2 },
   { name: "Product 2", price: 20, quantity: 1 },
