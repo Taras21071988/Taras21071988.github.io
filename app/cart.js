@@ -1,4 +1,10 @@
 const userName = document.querySelector(".user__name");
+if (!localStorage.getItem("name")) {
+  alert("Не надо хитрить!");
+  window.location.href = "/index.html";
+} else {
+}
+
 let nameUser = localStorage.getItem("name");
 userName.innerHTML = `Ваши товары ${nameUser}`;
 
