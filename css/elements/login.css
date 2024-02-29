@@ -44,3 +44,9 @@
 .logined {
   text-align: center;
 }
+.logined__text {
+  text-align: center;
+}
+.logined__text span {
+  text-transform: uppercase;
+}

@@ -7,8 +7,16 @@ const user = {
 function logined() {
   formWrapper.innerHTML = "";
   formWrapper.innerHTML = `
-    <h2 class="logined"> Вы успешно авторизировались</h2>
+    <h2 class="logined mb-25"> Вы успешно авторизировались</h2>
+    <p class="logined__text">Добрый день <span> ${user.log}</span></p>
+    <button class="btn exit__btn">Exit</button>
   `;
+  const exitBtn = document.querySelector(".exit__btn");
+  exitBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem("name");
+    loginForm();
+  });
 }
 
 function loginForm() {
@@ -62,7 +70,7 @@ function loginForm() {
       alert("Не все поля заполненны");
     } else {
       if (loginInp.value === user.log && passwordInp.value === user.pass) {
-        localStorage.setItem("user", "logined");
+        localStorage.setItem("name", `${loginInp.value}`);
         logined();
         console.log("Удачно");
       } else {
@@ -116,7 +124,7 @@ function registerForm() {
   });
 }
 function entry() {
-  if (localStorage.getItem("user")) {
+  if (localStorage.getItem("name")) {
     formWrapper.innerHTML = "";
     logined();
   } else {

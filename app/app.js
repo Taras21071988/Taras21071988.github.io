@@ -1,6 +1,7 @@
 const checkbox = document.getElementById("slider");
 const mediaBtn = document.querySelector(".media__btn-wrapper");
 const navMenu = document.querySelector(".nav__menu");
+const cartBtn = document.querySelector(".cart");
 
 checkbox.addEventListener("change", function () {
   changeTheme(checkbox.checked);
@@ -33,4 +34,13 @@ mediaBtn.addEventListener("click", function () {
   navMenu.classList.toggle("actived");
   let mainElement = document.querySelector(".main");
   mainElement.classList.toggle("active", navMenu.classList.contains("actived"));
+});
+
+cartBtn.addEventListener("click", function () {
+  if (localStorage.getItem("name")) {
+    window.location.href = "/pages/cart.html";
+  } else {
+    alert("Пожалуйста войдите в систему");
+    window.location.href = "/pages/login.html";
+  }
 });
