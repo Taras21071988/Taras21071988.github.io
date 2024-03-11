@@ -35,10 +35,11 @@ NaN == NaN; // false
 // Завдання 3
 
 function guesscheck() {
+  let chosed = 3;
   let number = prompt("Введіть число:");
-  if (number > 3) {
+  if (number > chosed) {
     alert("The number is too long");
-  } else if (number < 3) {
+  } else if (number < chosed) {
     alert("The number is short");
   } else {
     alert("Congratulations, You did it!");
@@ -50,6 +51,34 @@ btnGuess.addEventListener("click", function (e) {
   guesscheck();
 });
 //
+
+// Завдання 3.1 більш схоже на гру з вгадуванням числа
+let numbChose = Math.floor(Math.random() * 10) + 1;
+function numberCheck() {
+  console.log(numbChose);
+  let number = prompt("Введіть число:");
+  if (number > numbChose) {
+    alert("The number is too long");
+  } else if (number < numbChose) {
+    alert("The number is short");
+  } else {
+    alert("Congratulations, You did it!");
+  }
+}
+const btnGame = document.getElementById("game");
+btnGame.addEventListener("click", function (e) {
+  e.preventDefault();
+  numberCheck();
+});
+
+const btnGenerator = document.getElementById("rand");
+btnGenerator.addEventListener("click", function (e) {
+  e.preventDefault();
+  numbChose = Math.floor(Math.random() * 10) + 1;
+  console.log(numbChose);
+});
+//
+
 
 // Завдання 4
 let week = [
