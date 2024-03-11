@@ -53,7 +53,11 @@ btnGuess.addEventListener("click", function (e) {
 //
 
 // Завдання 3.1 більш схоже на гру з вгадуванням числа
-let numbChose = Math.floor(Math.random() * 10) + 1;
+let numbChose;
+function nRand() {
+  return (numbChose = Math.floor(Math.random() * 10) + 1);
+}
+nRand();
 function numberCheck() {
   console.log(numbChose);
   let number = prompt("Введіть число:");
@@ -63,6 +67,7 @@ function numberCheck() {
     alert("The number is short");
   } else {
     alert("Congratulations, You did it!");
+    nRand();
   }
 }
 const btnGame = document.getElementById("game");
@@ -74,11 +79,10 @@ btnGame.addEventListener("click", function (e) {
 const btnGenerator = document.getElementById("rand");
 btnGenerator.addEventListener("click", function (e) {
   e.preventDefault();
-  numbChose = Math.floor(Math.random() * 10) + 1;
+  nRand();
   console.log(numbChose);
 });
 //
-
 
 // Завдання 4
 let week = [
