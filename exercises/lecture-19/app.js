@@ -63,7 +63,7 @@ console.log(lastCharThree(str3));
 let a = "When candles are out,";
 let b = "all cats are grey.";
 
-console.log(a.concat(b));
+console.log(a.concat(" " + b));
 //
 
 //Завдання 7 - Використовував функцію щоб не перейменовувати змінні
@@ -91,7 +91,7 @@ console.log(getFullName(firstName, lastName));
 function greeting(firstName, lastName) {
   let hi = "Hello,";
   let full = getFullName(firstName, lastName);
-  return hi + " " + full;
+  return hi + " " + full + "!";
 }
 console.log(greeting(firstName, lastName));
 //
@@ -115,7 +115,7 @@ console.log(string1.trimEnd());
 const phoneNumber = "\t  555-123\n ";
 
 console.log(phoneNumber.trim());
-console.log(phoneNumber.trim() + "\\n"); // тут если честно не понял немного, \n - это символ новой строки
+console.log(phoneNumber.trimStart()); // тут если честно не понял немного, \n - это символ новой строки
 //
 
 //Завдання 12
@@ -124,7 +124,7 @@ let sentence = "Always look on the bright side of life";
 
 console.log(sentence.includes("look up"));
 console.log(sentence.includes("look on"));
-console.log(sentence.slice(8).includes("look on"));
+console.log(sentence.includes("look on", 8));
 //
 
 //Завдання 13
@@ -183,7 +183,7 @@ function truncateTextSubstr(str) {
   return str.substr(0, 50);
 }
 console.log(truncateTextSubstr(sentenceNew));
-// Но лучше сделать немного по другому - в таком случае колличеством символов можно будет управлять 
+// Но лучше сделать немного по другому - в таком случае колличеством символов можно будет управлять
 
 /*
 let maxLength = 50;
@@ -192,4 +192,4 @@ function truncateTextSubstring(str,maxlength) {
 }
 console.log(truncateTextSubstring(sentenceNew,maxLength));
 */
-// 
+//
