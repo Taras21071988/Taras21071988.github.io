@@ -154,7 +154,7 @@ function login(log) {
 login("qwerty1234");
 //
 
-//Завдання 15
+//Завдання 16
 function mail(email) {
   const pattern = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
 
@@ -170,7 +170,7 @@ function mail(email) {
 mail("test@test.com");
 //
 
-//Завдання 16
+//Завдання 17
 let sentenceNew =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in sapien eu velit eleifend ullamcorper eget vitae nulla. Aenean euismod purus sed neque dictum, nec lobortis ante faucibus.";
 
@@ -192,3 +192,4 @@ function truncateTextSubstring(str,maxlength) {
 }
 console.log(truncateTextSubstring(sentenceNew,maxLength));
 */
+// 
