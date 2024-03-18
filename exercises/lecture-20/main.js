@@ -64,22 +64,33 @@ personAlex.introduceSelf();
 personDenis.introduceSelf();
 //
 
-// Завдання 6
+//Завдання 6
 
+// function Person(name) {
+//   const obj = {};
+//   obj.name = name;
+//   obj.introduceSelf = function () {
+//     console.log("Hi! I'm", this.name);
+//   };
+//   return obj;
+// }
+// let mary = new Person("Mery");
+// let tom = new Person("Tom");
+
+// mary.introduceSelf();
+// tom.introduceSelf();
+//
 function Person(name) {
-  const obj = {};
-  obj.name = name;
-  obj.introduceSelf = function () {
+  this.name = name;
+  this.introduceSelf = function () {
     console.log("Hi! I'm", this.name);
   };
-  return obj;
 }
 let mary = new Person("Mery");
 let tom = new Person("Tom");
 
 mary.introduceSelf();
 tom.introduceSelf();
-//
 
 // Завдання 7 "Тут немного не понял - надеюсь что верно выполнил"
 if ("prop" in mary) {
