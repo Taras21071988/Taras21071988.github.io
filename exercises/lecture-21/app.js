@@ -137,6 +137,20 @@ for (let i = 0; i < Numbs.length; i++) {
 //
 
 //  Завдання 13
+// Внесення змін у зв'язку із зауваженнями
+{
+  const names = ["Batman", "Catwoman", "Joker", "Bane"];
+
+  const iCatwoman = names.indexOf("Catwoman");
+  const iJoker = names.indexOf("Joker");
+
+  if (iCatwoman !== -1 && iJoker !== -1) {
+    const iAlfred = Math.min(iCatwoman, iJoker);
+    names.splice(iAlfred, 2, "Alfred");
+  }
+
+  console.log(names);
+}
 
 {
   const names = ["Batman", "Catwoman", "Joker", "Bane"];
@@ -204,12 +218,14 @@ for (let i = 0; i < Numbs.length; i++) {
 //
 
 //  Завдання 15
-const names = ["Batman", "Catwoman", "Joker", "Bane"];
-const alf = names.indexOf("Alfred");
+{
+  const names = ["Batman", "Catwoman", "Joker", "Bane"];
+  const alf = names.indexOf("Alfred");
 
-if (alf !== -1) {
-  names.splice(alf, 1);
-} else {
-  console.log("Такого нет");
+  if (alf !== -1) {
+    names.splice(alf, 1);
+  } else {
+    console.log("Такого нет");
+  }
+  console.log(names);
 }
-console.log(names);
