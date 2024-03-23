@@ -70,50 +70,74 @@ for (let i = 0; i < cont.length; i++) {
 
 // Завдання 8
 
+// const headers = document.querySelectorAll(".container header");
+// console.log(headers);
+// const classes = ["first", "second", "third", "fourth"];
+
+// for (let i = 0; i < headers.length; i++) {
+//   const header = headers[i].querySelector("h1");
+//   const origId = header.id;
+//   const origClass = header.className;
+
+//   if (i === 0) {
+//     header.classList.add(classes[i]);
+//   } else if (i === 1) {
+//     header.outerHTML =
+//       "<h2 id='" +
+//       origId +
+//       "' class='" +
+//       origClass +
+//       " " +
+//       classes[i] +
+//       "'>" +
+//       header.innerHTML +
+//       "</h2>";
+//   } else if (i === 2) {
+//     header.outerHTML =
+//       "<h3 id='" +
+//       origId +
+//       "' class='" +
+//       origClass +
+//       " " +
+//       classes[i] +
+//       "'>" +
+//       header.innerHTML +
+//       "</h3>";
+//   } else if (i === 3) {
+//     header.outerHTML =
+//       "<h4 id='" +
+//       origId +
+//       "' class='" +
+//       origClass +
+//       " " +
+//       classes[i] +
+//       "'>" +
+//       header.innerHTML +
+//       "</h4>";
+//   }
+// }
+// Залишив початкові id і class у всіх елементів, якщо буде потрібно то можна легко виправити під вимоги залишити тільки у четвертого
+
 const headers = document.querySelectorAll(".container header");
-console.log(headers);
 const classes = ["first", "second", "third", "fourth"];
 
 for (let i = 0; i < headers.length; i++) {
-  const header = headers[i].querySelector("h1");
-  const origId = header.id;
-  const origClass = header.className;
+  const header = headers[i];
+  const h1 = header.querySelector("h1");
+  const tagName = i === 0 ? "h1" : i === 1 ? "h2" : i === 2 ? "h3" : "h4";
 
-  if (i === 0) {
-    header.classList.add(classes[i]);
-  } else if (i === 1) {
-    header.outerHTML =
-      "<h2 id='" +
-      origId +
-      "' class='" +
-      origClass +
-      " " +
-      classes[i] +
-      "'>" +
-      header.innerHTML +
-      "</h2>";
-  } else if (i === 2) {
-    header.outerHTML =
-      "<h3 id='" +
-      origId +
-      "' class='" +
-      origClass +
-      " " +
-      classes[i] +
-      "'>" +
-      header.innerHTML +
-      "</h3>";
-  } else if (i === 3) {
-    header.outerHTML =
-      "<h4 id='" +
-      origId +
-      "' class='" +
-      origClass +
-      " " +
-      classes[i] +
-      "'>" +
-      header.innerHTML +
-      "</h4>";
+  const newElement = document.createElement(tagName);
+  newElement.textContent = h1.textContent;
+
+  if (h1.id && i === 3) {
+    newElement.id = h1.id;
   }
+
+  if (h1.className && i === 3) {
+    newElement.className = h1.className;
+  }
+
+  header.replaceChild(newHeader, h1);
+
+  newElement.classList.add(classes[i]);
 }
-// Залишив початкові id і class у всіх елементів, якщо буде потрібно то можна легко виправити під вимоги залишити тільки у четвертого
