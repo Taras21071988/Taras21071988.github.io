@@ -13,7 +13,7 @@ function multiply(n1, n2) {
   return n1 * n2;
 }
 console.log(calculate(sum, 0, [1, 2, 4])); // => 7
-console.log(calculate(multiply, 1, [1, 2, 4])); // => 7
+console.log(calculate(multiply, 1, [1, 2, 4])); // => 8
 //
 
 // Завдання 2
