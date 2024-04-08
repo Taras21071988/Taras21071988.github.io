@@ -21,6 +21,7 @@ formRegister.addEventListener("submit", function (e) {
 
   let passwordValid =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+
   if (password.length < 8) {
     renderError("Пароль не може бути коротшим за 8 символів");
     return;
