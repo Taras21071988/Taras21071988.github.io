@@ -28,6 +28,7 @@ formRegister.addEventListener("submit", function (e) {
     renderError(
       "Пароль має містити принаймні одну велику літеру, одну малу літеру, одну цифру та один спеціальний символ."
     );
+    return;
   }
   renderSuccess("Pеєстрація пройшла успішно");
 
