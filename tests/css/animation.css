@@ -1,0 +1,57 @@
+/* анімація для списку з посиланнями на сторінки */
+@keyframes head {
+  0% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* анімація для написи off */
+@keyframes col {
+  from {
+    color: red;
+  }
+  to {
+    color: var(--text-color);
+  }
+}
+/* анімація для напису із зазначенням сторінки */
+@keyframes li {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* ... */
+@keyframes social {
+  from {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  to {
+    color: red;
+    rotate: 360deg;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes extension {
+  from {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    font-size: 0.5em;
+    font-weight: 00;
+  }
+  to {
+    letter-spacing: 0.275em;
+    opacity: 1;
+    font-size: 2em;
+    font-weight: 700;
+  }
+}

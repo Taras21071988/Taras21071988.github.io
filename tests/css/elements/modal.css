@@ -1,0 +1,84 @@
+.open__modal,
+.close__btn,
+.send__btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+.modal__bg {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* cursor: pointer; */
+  z-index: 1000;
+}
+
+.modal__window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 100px 25px 25px 25px;
+  max-width: 50vw;
+  max-height: 60vh;
+  background: var(--bg-color);
+
+  border-radius: 12px;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.form__title {
+  text-align: center;
+  font-size: 1.9em;
+}
+.form__inp {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: transparent;
+}
+.form__btn {
+  display: flex;
+  justify-content: space-around;
+}
+.send__btn[disabled] {
+  filter: var(--filter);
+}
+@media (min-width: 820px) {
+  .modal__window {
+    max-width: 40vw;
+    max-height: 70vh;
+  }
+  .open__modal,
+  .close__btn,
+  .send__btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1220px) {
+  .modal__window {
+    max-width: 30vw;
+    max-height: 70vh;
+  }
+}

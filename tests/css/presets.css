@@ -1,0 +1,47 @@
+.df {
+  display: flex;
+}
+.df-dc {
+  display: flex;
+  flex-direction: column;
+}
+.df-dr {
+  display: flex;
+  flex-direction: row;
+}
+.ai-c {
+  align-items: center;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+
+.tt-u {
+  text-transform: uppercase;
+}
+.gp-1 {
+  gap: 10px;
+}
+.gp-2 {
+  gap: 20px;
+}
+.mb-25 {
+  margin-bottom: 25px;
+}
+.mb-150 {
+  margin-bottom: 150px;
+}
+.ta-c {
+  text-align: center;
+}
+.fs-1 {
+  font-size: 1rem;
+}
+.fs-2 {
+  font-size: 2rem;
+}
+@media (max-width: 620px) {
+  .gp-1 {
+    gap: 5px;
+  }
+}
