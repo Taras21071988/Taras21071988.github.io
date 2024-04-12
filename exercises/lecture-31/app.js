@@ -1,13 +1,13 @@
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const template = (item) => `
-<h3>${item.title}</h3>
-<div>${item.body}</div>
-<p>Author: <strong><span class="author" data-id="${item.userId}"></stan></strong></p>
+  <h3>${item.title}</h3>
+  <div>${item.body}</div>
+  <p>Author: <strong><span class="author" data-id="${item.userId}"></span></strong></p>
 `;
 
 const xhrPromise = (method, url) => {
-  const promise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.send();
@@ -24,29 +24,40 @@ const xhrPromise = (method, url) => {
       reject("Something went wrong!");
     };
   });
+};
 
-  return promise;
+const usersCache = {};
+
+const getUserInfo = async (userId) => {
+  if (usersCache[userId]) {
+    return usersCache[userId];
+  } else {
+    const response = await xhrPromise(
+      "GET",
+      `https://jsonplaceholder.typicode.com/users/${userId}`
+    );
+    const userInfo = JSON.parse(response);
+    usersCache[userId] = userInfo;
+    return userInfo;
+  }
 };
 
 xhrPromise("GET", url)
-  .then((response) => {
+  .then(async (response) => {
     const posts = JSON.parse(response);
     let result = "";
-    posts.forEach((item) => {
+    for (const item of posts) {
       result += template(item);
-    });
+    }
     document.getElementById("blog").innerHTML = result;
+
+    const authorElements = document.querySelectorAll(".author");
+    for (const authorElement of authorElements) {
+      const userId = authorElement.dataset.id;
+      const userInfo = await getUserInfo(userId);
+      authorElement.textContent = userInfo.name;
+    }
   })
-  .then(() => {
-    const users = document.querySelectorAll(".author");
-    users.forEach(user => {
-      xhrPromise(
-        "GET",
-        `https://jsonplaceholder.typicode.com/users/${user.dataset.id}`
-      )
-      .then((response) => {
-        let userName = JSON.parse(response);
-        user.textContent = userName.name;
-      });
-    });
+  .catch((error) => {
+    console.error(error);
   });
