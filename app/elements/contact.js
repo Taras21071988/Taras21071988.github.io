@@ -36,14 +36,17 @@ function setupModal() {
   const text = document.getElementById("text");
   const checkPolis = document.getElementById("checkPolis");
 
-  btnOpen.addEventListener("click", function () {
+  btnOpen.addEventListener("click", function (e) {
+    e.preventDefault();
     modal.style.display = "block";
   });
-  btnClose.addEventListener("click", function () {
+  btnClose.addEventListener("click", function (e) {
+    e.preventDefault();
     modal.style.display = "none";
   });
 
   checkPolis.addEventListener("change", function (e) {
+    e.preventDefault();
     sendBtn.disabled = !e.target.checked;
   });
 
@@ -54,8 +57,10 @@ function setupModal() {
               Ваш email ${email.value}
               Ваше повідомлення ${text.value}`);
       modal.style.display = "none";
-      email.value = "";
-      text.value = "";
+      setTimeout(function () {
+        email.value = "";
+        text.value = "";
+      }, 0);
       return;
     } else {
       alert("Не всі поля заповнені");

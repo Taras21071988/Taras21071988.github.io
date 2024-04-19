@@ -116,7 +116,8 @@ window.addEventListener("popstate", function () {
 
 buttonsConfig.forEach((config) => {
   config.buttons.forEach((btn) => {
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault()
       handleButtonClick(config.buttons, config.content, config.href);
       if (config.content === contact) {
         setupModal();
