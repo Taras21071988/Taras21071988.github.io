@@ -1,4 +1,4 @@
-/* анімація для списку з посиланнями на сторінки */
+
 @keyframes head {
   0% {
     transform: translateY(-400%);
@@ -7,7 +7,7 @@
     transform: translateY(0);
   }
 }
-/* анімація для написи off */
+
 @keyframes col {
   from {
     color: red;
@@ -16,7 +16,7 @@
     color: var(--text-color);
   }
 }
-/* анімація для напису із зазначенням сторінки */
+
 @keyframes li {
   from {
     opacity: 0;
@@ -28,7 +28,6 @@
   }
 }
 
-/* ... */
 @keyframes social {
   from {
     transform: scale(1);

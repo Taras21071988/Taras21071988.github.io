@@ -8,7 +8,7 @@
   font-size: 3.75em;
 }
 
-/* блок з анімацією заголовка сторінки */
+
 .title__item {
   animation: li 1.5s forwards;
   opacity: 0;

@@ -16,14 +16,51 @@
       rel="shortcut icon"
       type="image/png"
       sizes="32x32"
-      href="images/favicon-32x32.png"
+      href="favicon-32x32.png"
     />
   </head>
+
   <body class="notranslate">
+    <section id="section__modal">
+      <div class="modal__bg">
+        <div class="modal__window">
+          <div class="modal__close">
+            <button class="close__btn">Close</button>
+          </div>
+          <form class="modal__form" onsubmit>
+            <h2 class="form__title">Fill in the feedback fields</h2>
+            <input
+              id="mail"
+              class="form__inp"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <input
+              id="text"
+              class="form__inp"
+              type="text"
+              placeholder="Specify the essence of your problem"
+              maxlength="200"
+            />
+
+            <div class="form__btn">
+              <button class="send__btn" disabled>Send</button>
+            </div>
+            <div class="private__polis">
+              <label>
+                <input class="private__check" id="checkPolis" type="checkbox" />
+
+                By submitting the form you agree to the user agreement, which
+                unfortunately I haven't made up yet
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <header class="header">
       <div class="container">
         <div class="header__wrapper df-dr ai-c jc-sb gp-1">
-          <!-- Використовую код svg для можливості зміни кольору при перемиканні теми -->
           <div class="logo__wrapper df ai-c gp-1">
             <div style="width: 50px">
               <svg
@@ -51,18 +88,20 @@
             </div>
           </div>
           <nav class="nav__menu df-dr ai-c gp-2">
-            <a class="menu__home active__menu" href="index.html">Home</a>
-            <a class="menu__about" href="pages/about.html">About</a>
-            <a class="menu__catalog" href="pages/catalog.html">Catalog</a>
-            <a class="menu__contact" href="pages/contact.html">Contact</a>
-            <!-- завдання 11 -->
+            <a class="menu__home active__menu" href="#">Home</a>
+            <a class="menu__about" href="#">About</a>
+            <a class="menu__catalog" href="#">Catalog</a>
+            <a class="menu__contact" href="#">Contact</a>
+
             <div class="users__menu df gp-1">
-              <a class="fa-solid fa-heart" href="#"></a>
-              <a class="fa-solid fa-basket-shopping cart" href="#"></a>
-              <a class="fa-solid fa-user" href="pages/login.html"></a>
+              <a class="fa-solid fa-heart menu__favorite" href="#"></a>
+              <a class="fa-solid fa-basket-shopping cart" href="#"
+                ><span class="cart__total">0</span></a
+              >
+              <a class="fa-solid fa-user menu__login" href="#"></a>
             </div>
-            <!-- ... -->
           </nav>
+
           <div class="media__btn-wrapper">
             <span class="media__btn"></span>
             <span class="media__btn"></span>
@@ -85,34 +124,7 @@
       </div>
     </header>
 
-    <main class="main">
-      <section id="descr">
-        <div class="container">
-          <div class="descr__wrapper">
-            <ul class="descr__title df tt-u">
-              <ul class="descr__title-item df-dr">
-                <li class="title__item">h</li>
-                <li class="title__item">o</li>
-                <li class="title__item">m</li>
-                <li class="title__item">e</li>
-              </ul>
-              <ul class="descr__title-item df-dr">
-                <li class="title__item">p</li>
-                <li class="title__item">a</li>
-                <li class="title__item">g</li>
-                <li class="title__item">e</li>
-              </ul>
-            </ul>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-              tempore ducimus rerum animi architecto impedit, voluptatem
-              necessitatibus autem distinctio tempora! Aut consectetur
-              architecto cum quaerat minus numquam delectus, nam ipsum.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+    <main class="main" id="app"></main>
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper df ai-c jc-sb">
@@ -139,26 +151,30 @@
             </div>
             <ul class="link__list df-dc gp-1">
               <span class="list__name">Navigation:</span>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="pages/about.html">About</a></li>
-              <li><a href="pages/catalog.html">Catalog</a></li>
-              <li><a href="pages/contact.html">Contact</a></li>
+              <li class="nav__menu">
+                <a class="menu__home active__menu" href="#">Home</a>
+              </li>
+              <li class="nav__menu">
+                <a href="#" class="menu__about">About</a>
+              </li>
+              <li class="nav__menu">
+                <a class="menu__catalog" href="#">Catalog</a>
+              </li>
+              <li class="nav__menu">
+                <a class="menu__contact" href="#">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
-        <!--  внесення змін у зв'язку з вимогами до уроку 5  -->
-        <section class="footer-social">
-          <ul class="list-unstyled df gp-1">
-            <li><a class="fa-brands fa-facebook" href="#"></a></li>
-            <li><a class="fa-brands fa-twitter" href="#"></a></li>
-            <li><a class="fa-brands fa-github" href="#"></a></li>
-            <li><a class="fa-brands fa-linkedin" href="#"></a></li>
-            <li><a class="fa-brands fa-youtube" href="#"></a></li>
-            <li><a class="fa-brands fa-instagram" href="#"></a></li>
-          </ul>
-        </section>
       </div>
     </footer>
+    <script src="app/basic.js"></script>
+    <script src="app/elements/about.js"></script>
+    <script src="app/elements/catalog.js"></script>
+    <script src="app/elements/contact.js"></script>
+    <script src="app/elements/favorites.js"></script>
+    <script src="app/elements/cart.js"></script>
+    <script src="app/elements/login.js"></script>
     <script src="app/app.js"></script>
   </body>
 </html>

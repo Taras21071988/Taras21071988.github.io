@@ -1,4 +1,4 @@
-/* тимчасово закоментував у зв'язку з вимогами до виконання уроків */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("reset.css");
@@ -8,13 +8,15 @@
 @import url("elements/header.css");
 @import url("elements/descr.css");
 @import url("elements/about.css");
+@import url("elements/favorites.css");
 @import url("elements/cart.css");
 @import url("elements/login.css");
 @import url("elements/modal.css");
 @import url("elements/footer.css");
 @import url("elements/categories.css");
+@import url("elements/dialog.css");
 
-/* "Липкий" footer */
+
 body {
   height: 100vh;
   display: flex;
@@ -23,16 +25,26 @@ body {
   color: var(--text-color);
   font-family: var(--font-main);
   font-size: var(--fs-main);
+}
 
-  /* внесення змін у зв'язку з вимогами до уроку 5 */
-  /* font-family: var(--primary-font-family);
-  font-size: var(--primary-font-size); */
-  /* ... */
+::-webkit-scrollbar {
+  width: 10px; 
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #666; 
+}
+::-moz-scrollbar {
+  width: 10px;
+}
+::-moz-scrollbar-thumb {
+  background-color: #666; 
 }
 
 .main {
   flex: auto;
   transition: margin-top 0.5s ease;
+  margin-bottom: 20px;
 }
 .main.active {
   margin-top: calc(var(--nav-h) - var(--header-h) + 10px);
@@ -42,7 +54,7 @@ body {
   background-color: var(--bs-color);
 }
 
-/* внесення змін у зв'язку з вимогами до уроку 5 */
+
 h1,
 h2,
 h3 {

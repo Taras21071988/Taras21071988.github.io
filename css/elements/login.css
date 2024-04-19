@@ -50,3 +50,6 @@
 .logined__text span {
   text-transform: uppercase;
 }
+.cart__total {
+  display: none;
+}

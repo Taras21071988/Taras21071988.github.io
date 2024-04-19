@@ -1,46 +1,175 @@
-const checkbox = document.getElementById("slider");
-const mediaBtn = document.querySelector(".media__btn-wrapper");
-const navMenu = document.querySelector(".nav__menu");
-const cartBtn = document.querySelector(".cart");
+const buttonsConfig = [
+  {
+    buttons: document.querySelectorAll(".menu__about"),
+    content: about,
+    href: "about#",
+  },
+  {
+    buttons: document.querySelectorAll(".menu__home"),
+    content: homeContent,
+    href: "home#",
+  },
+  {
+    buttons: document.querySelectorAll(".menu__contact"),
+    content: contact,
+    href: "contact#",
+  },
+  {
+    buttons: document.querySelectorAll(".menu__login"),
+    content: loginPages,
+    href: "login#",
+  },
+  {
+    buttons: document.querySelectorAll(".menu__catalog"),
+    content: catalog,
+    href: "catalog#",
+  },
+  {
+    buttons: document.querySelectorAll(".menu__favorite"),
+    content: favorites,
+    href: "favorites#",
+  },
+  {
+    buttons: document.querySelectorAll(".cart"),
+    content: cart,
+    href: "cart#",
+  },
+];
+const menuLinks = document.querySelectorAll(".nav__menu a");
 
-checkbox.addEventListener("change", function () {
-  changeTheme(checkbox.checked);
-});
-function changeTheme(isChecked) {
-  if (isChecked) {
-    document.body.setAttribute("dark", "");
-    localStorage.setItem("theme", "dark");
+let originalUrl = window.location.href.split("#")[0];
+
+function addToURL(word) {
+  let baseUrl = originalUrl.split("?")[0];
+  let newUrl = baseUrl + "?" + word;
+  window.history.pushState({}, "", newUrl);
+}
+
+function visibleNumb() {
+  const cartNumb = document.querySelector(".cart__total");
+  const user = localStorage.getItem("userData");
+
+  if (!user) {
+    cartNumb.style.display = "none";
   } else {
-    document.body.removeAttribute("dark");
-    localStorage.removeItem("theme");
+    cartNumb.style.display = "inline-block";
   }
 }
-try {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.setAttribute("dark", "");
-    checkbox.checked = true;
-  } else {
-    document.body.removeAttribute("dark");
-    checkbox.checked = false;
-  }
-} catch (err) {}
 
-let li = document.querySelectorAll(".title__item");
-for (let i = 0, len = li.length; i < len; i++) {
-  li[i].style.animationDelay = i / 10.333 + "s";
+window.addEventListener("load", function () {
+  let str = window.location.href;
+  let index = str.indexOf("?");
+  visibleNumb();
+  if (index !== -1) {
+    let substr = str.substring(index + 1);
+    if (substr === buttonsConfig[0].href) {
+      handleButtonClick(buttonsConfig[0].buttons, buttonsConfig[0].content);
+    } else if (substr === buttonsConfig[1].href) {
+      handleButtonClick(buttonsConfig[1].buttons, buttonsConfig[1].content);
+    } else if (substr === buttonsConfig[2].href) {
+      handleButtonClick(buttonsConfig[2].buttons, buttonsConfig[2].content);
+      setupModal();
+    } else if (substr === buttonsConfig[3].href) {
+      handleButtonClick(buttonsConfig[3].buttons, buttonsConfig[3].content);
+      loginedFunc();
+    } else if (substr === buttonsConfig[4].href) {
+      handleButtonClick(buttonsConfig[4].buttons, buttonsConfig[4].content);
+      catalogFunc();
+    } else if (substr === buttonsConfig[5].href) {
+      handleButtonClick(buttonsConfig[5].buttons, buttonsConfig[5].content);
+      renderFavorites();
+    } else if (substr === buttonsConfig[6].href) {
+      handleButtonClick(buttonsConfig[6].buttons, buttonsConfig[6].content);
+      renderCartItems();
+    }
+    renderNumb();
+  }
+});
+
+window.addEventListener("popstate", function () {
+  let str = window.location.href;
+  let index = str.indexOf("?");
+  if (index !== -1) {
+    let substr = str.substring(index + 1);
+    if (substr === buttonsConfig[0].href) {
+      handleButtonClick(buttonsConfig[0].buttons, buttonsConfig[0].content);
+    } else if (substr === buttonsConfig[1].href) {
+      handleButtonClick(buttonsConfig[1].buttons, buttonsConfig[1].content);
+    } else if (substr === buttonsConfig[2].href) {
+      handleButtonClick(buttonsConfig[2].buttons, buttonsConfig[2].content);
+      setupModal();
+    } else if (substr === buttonsConfig[3].href) {
+      handleButtonClick(buttonsConfig[3].buttons, buttonsConfig[3].content);
+      loginedFunc();
+    } else if (substr === buttonsConfig[4].href) {
+      handleButtonClick(buttonsConfig[4].buttons, buttonsConfig[4].content);
+      catalogFunc();
+    } else if (substr === buttonsConfig[5].href) {
+      handleButtonClick(buttonsConfig[5].buttons, buttonsConfig[5].content);
+      renderFavorites();
+    } else if (substr === buttonsConfig[6].href) {
+      handleButtonClick(buttonsConfig[6].buttons, buttonsConfig[6].content);
+      renderCartItems();
+    }
+  }
+});
+
+buttonsConfig.forEach((config) => {
+  config.buttons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      handleButtonClick(config.buttons, config.content, config.href);
+      if (config.content === contact) {
+        setupModal();
+      }
+      if (config.content === loginPages) {
+        getAllUser();
+        loginedFunc();
+      }
+      if (config.content === catalog) {
+        catalogFunc();
+      }
+      if (config.content === favorites) {
+        renderFavorites();
+      }
+      if (config.content === cart) {
+        renderCartItems();
+      }
+
+      addToURL(config.href);
+    });
+  });
+});
+
+function handleButtonClick(buttons, content, href) {
+  removeActiveClassFromLinks();
+  buttons.forEach((btn) => {
+    btn.classList.add("active__menu");
+  });
+
+  wrapper.innerHTML = content;
 }
 
-mediaBtn.addEventListener("click", function () {
-  navMenu.classList.toggle("actived");
-  let mainElement = document.querySelector(".main");
-  mainElement.classList.toggle("active", navMenu.classList.contains("actived"));
-});
+function removeActiveClassFromLinks() {
+  menuLinks.forEach((link) => {
+    if (link.classList.contains("active__menu")) {
+      link.classList.remove("active__menu");
+    }
+  });
+}
 
-cartBtn.addEventListener("click", function () {
-  if (localStorage.getItem("name")) {
-    window.location.href = "/pages/cart.html";
-  } else {
-    alert("Пожалуйста войдите в систему");
-    window.location.href = "/pages/login.html";
-  }
-});
+if (!localStorage.getItem("ProdactsData")) {
+  fetch("https://my-json-server.typicode.com/Taras21071988/db/products")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      localStorage.setItem("ProdactsData", JSON.stringify(data));
+      console.log("Загрузка");
+    })
+    .catch((error) => {
+      console.error("There was a problem with your fetch operation:", error);
+    });
+}

@@ -4,21 +4,14 @@
   --text-color-accent: red;
   --bs-color: rgba(0, 0, 0, 0.15);
   --filter: invert(65%);
-  /* --font-main: "Roboto", sans-serif; */
+  
   --font-main: "Montserrat", sans-serif;
   --fs-main: 16px;
   --mar-top: 300px;
   --header-h: 131px;
   --nav-h: 200px;
   scroll-behavior: smooth;
-  /* overflow: hidden; */
-
-  /* внесення змін у зв'язку з вимогами до уроку 6 */
-  /* --primary-text-color: #000;
-  --primary-bg-color: #fff;
-  --primary-font-family: "Roboto", sans-serif;
-  --primary-font-size: 0.875rem; */
-  /* ... */
+ 
 }
 
 [dark] {
@@ -34,7 +27,7 @@
   padding: 0;
 }
 
-/* внесення змін у зв'язку з вимогами до уроку 5 */
+
 a {
   text-decoration: none;
 }

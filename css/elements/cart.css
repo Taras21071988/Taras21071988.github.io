@@ -1,26 +1,48 @@
-.main__title {
-  letter-spacing: 0.275em;
-  animation: extension 2s forwards;
-}
-#table__wrapper {
-  width: 100%;
-  margin: 0 auto;
+.table {
   display: table;
-  box-shadow: 0px 10px 40px 0px var(--bs-color);
-  text-align: center;
+  width: 100%;
 }
-.row_header {
-  font-weight: 600;
-  background-color: var(--bs-color);
-}
+
 .row {
   display: table-row;
 }
-.row:nth-of-type(even) {
-  background-color: var(--bs-color);
-  filter: contrast(3);
-}
+
 .cell {
-  padding: 10px 20px;
   display: table-cell;
+  padding: 8px;
+  border: 1px solid #000;
+}
+
+.row__header {
+  font-weight: bold;
+  background-color: transparent;
+}
+.cart__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.pricing__wrapper {
+  padding: 2rem;
+}
+.pricing__title {
+  margin-bottom: 2rem;
+}
+.action__button {
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 0.575rem;
+}
+.quan__decr,
+.quan__incr {
+  cursor: pointer;
+  border-radius: 8px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.price::after,
+.total::after,
+.pricing__totat::after {
+  content: "$";
 }

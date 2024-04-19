@@ -1,4 +1,4 @@
-/* внесення змін у зв'язку з вимогами до уроку 6 */
+
 aside {
   display: flex;
   flex-direction: column;
@@ -53,30 +53,48 @@ aside {
   position: relative;
   cursor: pointer;
   transition: all 1s ease;
+  /*  */
+  position: relative;
 }
-.product__item:hover {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 30px 35px rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  transform: scale(1.1);
-}
-
-.product__item:hover .item__text {
-  visibility: visible;
-  height: auto;
-}
-
-.item__text {
-  visibility: hidden;
-  height: 0;
-}
-.item__btn-buy {
+.icons__wrapper {
   position: absolute;
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+}
+.item__favorite,
+.item__info-icon {
+  transition: all 0.3s ease-in-out;
+}
+.item__favorite:hover,
+.item__info-icon:hover {
+  color: red;
+}
+.added {
+  color: aqua;
+}
+
+.item__btn-buy {
   right: 10px;
   bottom: 10px;
+}
+.btn-delete-favorite {
+  left: 10px;
+  bottom: 10px;
+}
+.item__btn-buy,
+.btn-delete-favorite {
+  position: absolute;
   color: var(--text-color);
   background-color: transparent;
   border-radius: 12px;
   border: 1px solid var(--text-color);
   padding: 10px 20px;
+  cursor: pointer;
+}
+.products__wrapper {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

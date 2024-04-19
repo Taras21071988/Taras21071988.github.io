@@ -1,0 +1,10 @@
+.favorites__title {
+  margin-bottom: 2rem;
+}
+
+.favorites__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}

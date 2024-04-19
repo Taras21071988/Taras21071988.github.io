@@ -14,10 +14,9 @@ h5,
 h6 {
   pointer-events: none;
 }
-/* тимчасово закоментував у зв'язку з вимогами до виконання уроків */
+
 a {
   color: inherit;
-  /* text-decoration: none; */
 }
 
 li {
