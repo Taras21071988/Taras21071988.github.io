@@ -117,7 +117,7 @@ window.addEventListener("popstate", function () {
 buttonsConfig.forEach((config) => {
   config.buttons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
-      e.preventDefault()
+      e.preventDefault();
       handleButtonClick(config.buttons, config.content, config.href);
       if (config.content === contact) {
         setupModal();
@@ -158,19 +158,44 @@ function removeActiveClassFromLinks() {
   });
 }
 
+// if (!localStorage.getItem("ProdactsData")) {
+//   fetch("https://my-json-server.typicode.com/Taras21071988/db/products")
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok");
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       localStorage.setItem("ProdactsData", JSON.stringify(data));
+//       console.log("Загрузка");
+//     })
+//     .catch((error) => {
+//       console.error("There was a problem with your fetch operation:", error);
+//     });
+// }
+
+function loadData() {
+  console.log("выполнилась");
+  const masterKey =
+    "$2a$10$3AK4oCmUXowJtaZ1b60Wi.s0Pa4RJ/uZ2rHsCLbKohxTPqQmt7dLq";
+  const binId = "662621a5ad19ca34f85e175f/latest";
+
+  fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
+    method: "GET",
+    headers: {
+      "X-Master-Key": masterKey,
+    },
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      let jsonData = result.record.products;
+      console.log(jsonData);
+      let transformedData = jsonData.map(template);
+      localStorage.setItem("ProdactsData", JSON.stringify(transformedData));
+    })
+    .catch((error) => console.log("error", error));
+}
 if (!localStorage.getItem("ProdactsData")) {
-  fetch("https://my-json-server.typicode.com/Taras21071988/db/products")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      localStorage.setItem("ProdactsData", JSON.stringify(data));
-      console.log("Загрузка");
-    })
-    .catch((error) => {
-      console.error("There was a problem with your fetch operation:", error);
-    });
+  loadData();
 }
