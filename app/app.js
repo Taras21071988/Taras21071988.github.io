@@ -62,25 +62,33 @@ window.addEventListener("load", function () {
   visibleNumb();
   if (index !== -1) {
     let substr = str.substring(index + 1);
-    if (substr === buttonsConfig[0].href) {
-      handleButtonClick(buttonsConfig[0].buttons, buttonsConfig[0].content);
-    } else if (substr === buttonsConfig[1].href) {
-      handleButtonClick(buttonsConfig[1].buttons, buttonsConfig[1].content);
-    } else if (substr === buttonsConfig[2].href) {
-      handleButtonClick(buttonsConfig[2].buttons, buttonsConfig[2].content);
-      setupModal();
-    } else if (substr === buttonsConfig[3].href) {
-      handleButtonClick(buttonsConfig[3].buttons, buttonsConfig[3].content);
-      loginedFunc();
-    } else if (substr === buttonsConfig[4].href) {
-      handleButtonClick(buttonsConfig[4].buttons, buttonsConfig[4].content);
-      catalogFunc();
-    } else if (substr === buttonsConfig[5].href) {
-      handleButtonClick(buttonsConfig[5].buttons, buttonsConfig[5].content);
-      renderFavorites();
-    } else if (substr === buttonsConfig[6].href) {
-      handleButtonClick(buttonsConfig[6].buttons, buttonsConfig[6].content);
-      renderCartItems();
+    switch (substr) {
+      case buttonsConfig[0].href:
+        handleButtonClick(buttonsConfig[0].buttons, buttonsConfig[0].content);
+        break;
+      case buttonsConfig[1].href:
+        handleButtonClick(buttonsConfig[1].buttons, buttonsConfig[1].content);
+        break;
+      case buttonsConfig[2].href:
+        handleButtonClick(buttonsConfig[2].buttons, buttonsConfig[2].content);
+        setupModal();
+        break;
+      case buttonsConfig[3].href:
+        handleButtonClick(buttonsConfig[3].buttons, buttonsConfig[3].content);
+        loginedFunc();
+        break;
+      case buttonsConfig[4].href:
+        handleButtonClick(buttonsConfig[4].buttons, buttonsConfig[4].content);
+        catalogFunc();
+        break;
+      case buttonsConfig[5].href:
+        handleButtonClick(buttonsConfig[5].buttons, buttonsConfig[5].content);
+        renderFavorites();
+        break;
+      case buttonsConfig[6].href:
+        handleButtonClick(buttonsConfig[6].buttons, buttonsConfig[6].content);
+        renderCartItems();
+        break;
     }
     renderNumb();
   }
@@ -91,51 +99,61 @@ window.addEventListener("popstate", function () {
   let index = str.indexOf("?");
   if (index !== -1) {
     let substr = str.substring(index + 1);
-    if (substr === buttonsConfig[0].href) {
-      handleButtonClick(buttonsConfig[0].buttons, buttonsConfig[0].content);
-    } else if (substr === buttonsConfig[1].href) {
-      handleButtonClick(buttonsConfig[1].buttons, buttonsConfig[1].content);
-    } else if (substr === buttonsConfig[2].href) {
-      handleButtonClick(buttonsConfig[2].buttons, buttonsConfig[2].content);
-      setupModal();
-    } else if (substr === buttonsConfig[3].href) {
-      handleButtonClick(buttonsConfig[3].buttons, buttonsConfig[3].content);
-      loginedFunc();
-    } else if (substr === buttonsConfig[4].href) {
-      handleButtonClick(buttonsConfig[4].buttons, buttonsConfig[4].content);
-      catalogFunc();
-    } else if (substr === buttonsConfig[5].href) {
-      handleButtonClick(buttonsConfig[5].buttons, buttonsConfig[5].content);
-      renderFavorites();
-    } else if (substr === buttonsConfig[6].href) {
-      handleButtonClick(buttonsConfig[6].buttons, buttonsConfig[6].content);
-      renderCartItems();
+
+    switch (substr) {
+      case buttonsConfig[0].href:
+        handleButtonClick(buttonsConfig[0].buttons, buttonsConfig[0].content);
+        break;
+      case buttonsConfig[1].href:
+        handleButtonClick(buttonsConfig[1].buttons, buttonsConfig[1].content);
+        break;
+      case buttonsConfig[2].href:
+        handleButtonClick(buttonsConfig[2].buttons, buttonsConfig[2].content);
+        setupModal();
+        break;
+      case buttonsConfig[3].href:
+        handleButtonClick(buttonsConfig[3].buttons, buttonsConfig[3].content);
+        loginedFunc();
+        break;
+      case buttonsConfig[4].href:
+        handleButtonClick(buttonsConfig[4].buttons, buttonsConfig[4].content);
+        catalogFunc();
+        break;
+      case buttonsConfig[5].href:
+        handleButtonClick(buttonsConfig[5].buttons, buttonsConfig[5].content);
+        renderFavorites();
+        break;
+      case buttonsConfig[6].href:
+        handleButtonClick(buttonsConfig[6].buttons, buttonsConfig[6].content);
+        renderCartItems();
+        break;
     }
   }
 });
-
 buttonsConfig.forEach((config) => {
   config.buttons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       handleButtonClick(config.buttons, config.content, config.href);
-      if (config.content === contact) {
-        setupModal();
-      }
-      if (config.content === loginPages) {
-        getAllUser();
-        loginedFunc();
-      }
-      if (config.content === catalog) {
-        catalogFunc();
-      }
-      if (config.content === favorites) {
-        renderFavorites();
-      }
-      if (config.content === cart) {
-        renderCartItems();
-      }
 
+      switch (config.content) {
+        case contact:
+          setupModal();
+          break;
+        case loginPages:
+          getAllUser();
+          loginedFunc();
+          break;
+        case catalog:
+          catalogFunc();
+          break;
+        case favorites:
+          renderFavorites();
+          break;
+        case cart:
+          renderCartItems();
+          break;
+      }
       addToURL(config.href);
     });
   });
