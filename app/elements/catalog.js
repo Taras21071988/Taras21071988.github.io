@@ -86,8 +86,10 @@ function catalogFunc() {
             <i class="far fa-eye item__info-icon"></i>
         </div>
         <img class="card__img" src=${item.image}>
-         <h3 class="item__title">${item.name}</h3>
-        <p class="item__price">Цена: $${item.price}</p>
+        <div class="item__text-wrapper">
+        <h3 class="item__title">${item.name}</h3>
+        <p class="item__price">Цена: $${item.price}</p></div>
+        
         <button class="item__btn-buy">Buy</button>
       </div>
     `;

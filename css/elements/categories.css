@@ -44,7 +44,7 @@ aside {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 425px;
   width: 250px;
   gap: 30px;
   padding: 30px;
@@ -100,11 +100,20 @@ aside {
 }
 .card__img {
   position: absolute;
+  top: 60px;
   width: 204px;
   height: 194px;
   z-index: -1;
 }
+.item__text-wrapper{
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}
 .item__title,
 .item__price {
-  filter: brightness(20%);
+  /* filter: brightness(20%); */
 }
