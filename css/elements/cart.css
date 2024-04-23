@@ -9,6 +9,7 @@
 
 .cell {
   display: table-cell;
+  vertical-align: middle;
   padding: 8px;
   border: 1px solid #000;
 }
@@ -45,4 +46,8 @@
 .total::after,
 .pricing__totat::after {
   content: "$";
+}
+.cart__img{
+  width: 30px;
+  height: 30px;
 }

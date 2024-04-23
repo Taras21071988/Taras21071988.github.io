@@ -110,6 +110,7 @@ function catalogFunc() {
     constructor(item) {
       this.id = item.id;
       this.name = item.name;
+      this.image = item.image;
       this.price = item.price;
       this.quantity = item.quantity;
     }
@@ -118,7 +119,6 @@ function catalogFunc() {
   let products = [];
   function getData() {
     let productsData = JSON.parse(localStorage.getItem("ProdactsData"));
-    console.log(productsData);
     productsData.forEach((item) => {
       let product = new NewProduct(item);
       products.push(product);
@@ -151,7 +151,12 @@ function catalogFunc() {
   function showProductDetails(item) {
     const dialogMain = document.querySelector(".dialog-main");
     dialogMain.innerHTML = `
-      <h2>${item.name}</h2>
+
+    <div class="dialog__images-wrapper">
+      <img class="dialog__image" src="${item.image}">
+    </div>
+    <div class="dialog__text-wrapper">
+    <h2>${item.name}</h2>
       <p>Price: $${item.price}</p>
       <p>Description: ${item.text}</p>
       <div class="buttons__wrapper">
@@ -166,6 +171,9 @@ function catalogFunc() {
       <button id="incr">+</button>
       <button id ="btnBuy">Buy</button>
       </div>
+    
+    </div>
+      
       
     `;
     const decr = document.getElementById("decr");

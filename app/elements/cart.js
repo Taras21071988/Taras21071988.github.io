@@ -4,7 +4,7 @@ const cart = `<section id="descr">
     <div class="cart__wrapper">
         <div class="table">
             <div class="row row__header">
-           
+              <div class="cell">Image</div>
                 <div class="cell">Product</div>
                 <div class="cell">Price</div>
                 <div class="cell">Quantity</div>
@@ -46,7 +46,9 @@ const cartItemRender = (item, totalSum) => {
   row.dataset.id = item.id;
 
   row.innerHTML = `
-        
+        <div class="cell">
+        <img class="cart__img" src=${item.image}>
+        </div>
         <div class="cell">${item.name}</div>
         <div class="cell price">${item.price}</div>
         <div class="cell">

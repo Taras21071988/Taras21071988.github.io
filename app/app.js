@@ -158,23 +158,6 @@ function removeActiveClassFromLinks() {
   });
 }
 
-// if (!localStorage.getItem("ProdactsData")) {
-//   fetch("https://my-json-server.typicode.com/Taras21071988/db/products")
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error("Network response was not ok");
-//       }
-//       return response.json();
-//     })
-//     .then((data) => {
-//       localStorage.setItem("ProdactsData", JSON.stringify(data));
-//       console.log("Загрузка");
-//     })
-//     .catch((error) => {
-//       console.error("There was a problem with your fetch operation:", error);
-//     });
-// }
-
 function loadData() {
   console.log("выполнилась");
   const masterKey =
@@ -190,8 +173,7 @@ function loadData() {
     .then((response) => response.json())
     .then((result) => {
       let jsonData = result.record.products;
-      console.log(jsonData);
-      // let transformedData = jsonData.map(template);
+
       localStorage.setItem("ProdactsData", JSON.stringify(jsonData));
     })
     .catch((error) => console.log("error", error));

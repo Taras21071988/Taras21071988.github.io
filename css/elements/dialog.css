@@ -49,18 +49,32 @@ dialog {
   align-items: center;
 }
 #decr,
-#incr {cursor: pointer;
+#incr {
+  cursor: pointer;
   border-radius: 13px;
   width: 25px;
   height: 25px;
 }
-#btnBuy{
+#btnBuy {
   cursor: pointer;
   border-radius: 13px;
   padding: 10px;
 }
-.quantity-result{
+.quantity-result {
   border-radius: 13px;
   padding: 10px;
   border: 1px solid var(--text-color);
+}
+
+.dialog__images-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.dialog__image {
+  
+  width: 30%;
+  height: auto;
+}
+.dialog__text-wrapper{
+  display: flex;flex-direction: column;gap: 25px;
 }
