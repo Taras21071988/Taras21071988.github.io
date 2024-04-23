@@ -191,8 +191,8 @@ function loadData() {
     .then((result) => {
       let jsonData = result.record.products;
       console.log(jsonData);
-      let transformedData = jsonData.map(template);
-      localStorage.setItem("ProdactsData", JSON.stringify(transformedData));
+      // let transformedData = jsonData.map(template);
+      localStorage.setItem("ProdactsData", JSON.stringify(jsonData));
     })
     .catch((error) => console.log("error", error));
 }

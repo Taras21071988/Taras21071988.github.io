@@ -85,6 +85,7 @@ function catalogFunc() {
             <i class="far fa-heart item__favorite"></i>
             <i class="far fa-eye item__info-icon"></i>
         </div>
+        <img class="card__img" src=${item.image}>
          <h3 class="item__title">${item.name}</h3>
         <p class="item__price">Цена: $${item.price}</p>
         <button class="item__btn-buy">Buy</button>
@@ -95,6 +96,7 @@ function catalogFunc() {
     constructor(item) {
       this.id = item.id;
       this.name = item.name;
+      this.image = item.image;
       this.price = item.price;
       this.category = item.category;
       this.text = item.text;
@@ -114,6 +116,7 @@ function catalogFunc() {
   let products = [];
   function getData() {
     let productsData = JSON.parse(localStorage.getItem("ProdactsData"));
+    console.log(productsData);
     productsData.forEach((item) => {
       let product = new NewProduct(item);
       products.push(product);
@@ -247,7 +250,6 @@ function catalogFunc() {
         e.preventDefault();
 
         addToCart(selectedProduct);
-
       });
     });
 
@@ -294,7 +296,6 @@ function catalogFunc() {
         loginedUser.favoriteList.push(selectedProduct);
         localStorage.setItem("userData", JSON.stringify(loginedUser));
         this.classList.add("added");
-        
       });
     });
 
