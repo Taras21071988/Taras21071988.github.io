@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Blog from "./components/Blog";
+import Post from "./components/Post";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
       <Gallery />
 
       <Blog post={post} key={post.id} />
+      <Post />
       <Footer />
     </>
   );
