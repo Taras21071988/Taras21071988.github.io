@@ -1,8 +1,37 @@
+/* eslint-disable react/prop-types */
+import { createContext } from "react";
 import { useState, useEffect } from "react";
+import Layout from "./Layout";
 
-function Post() {
+export const PostContext = createContext("");
+// const Layout = ({ children }) => {
+//   return (
+//     <div>
+//       <Header />
+//       <main>{children}</main>
+//     </div>
+//   );
+// };
+// const PostMain = () => {
+//   const post = useContext(PostContext);
+//   return <main>{post.content}</main>;
+// };
+
+// const PostTitle = () => {
+//   const post = useContext(PostContext);
+//   return <h1>{post.title}</h1>;
+// };
+// const Header = () => {
+//   return (
+//     <header className="header">
+//       <PostTitle />
+//       <PostMain />
+//     </header>
+//   );
+// };
+
+const Post = () => {
   const [post, setPost] = useState([]);
-  const [like, setLike] = useState(0);
 
   const fetchData = async () => {
     const response = await (
@@ -13,36 +42,14 @@ function Post() {
     setPost(response);
   };
 
-  function likeThis() {
-    return setLike(like + 1);
-  }
-  useEffect(() => {
-    const likeButton = document.getElementById("like");
-    likeButton.addEventListener("click", likeThis);
-
-    return () => {
-      likeButton.removeEventListener("click", likeThis);
-    };
-  });
-
   useEffect(() => {
     fetchData();
   }, []);
+
   return (
-    <article className="post">
-      <div className="cover-container">
-        <img src={post.cover} alt={post.title} />
-      </div>
-      <div className="post-footer">
-        <h3>
-          {post.title} {post.id}
-        </h3>
-        <p>{post.content}</p>
-        <button id="like">
-          Like this post <strong>{like}</strong>
-        </button>
-      </div>
-    </article>
+    <PostContext.Provider value={post}>
+      <Layout></Layout>
+    </PostContext.Provider>
   );
-}
+};
 export default Post;
