@@ -23,7 +23,7 @@ function Post() {
     return () => {
       likeButton.removeEventListener("click", likeThis);
     };
-  });
+  }, []);
 
   useEffect(() => {
     fetchData();
