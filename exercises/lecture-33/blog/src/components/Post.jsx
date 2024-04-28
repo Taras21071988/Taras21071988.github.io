@@ -17,6 +17,7 @@ function Post() {
     return setLike(like + 1);
   }
   useEffect(() => {
+    fetchData();
     const likeButton = document.getElementById("like");
     likeButton.addEventListener("click", likeThis);
 
@@ -25,9 +26,6 @@ function Post() {
     };
   }, []);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
   return (
     <article className="post">
       <div className="cover-container">
