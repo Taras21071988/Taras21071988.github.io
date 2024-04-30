@@ -1,10 +1,17 @@
 import "./App.css";
-import Blog from "./pages/Blog";
+
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex">
-      <div id="sidebar" className="flex-">
+    <div
+      className="flex container mx-auto py-5  gap-5
+    "
+    >
+      <div
+        id="sidebar"
+        className="flex flex-col gap-5 rounded-3xl bg-slate-100 p-5"
+      >
         <h1 className="text-red-600">My Blog</h1>
         <div>
           <form id="search-form" role="search">
@@ -14,26 +21,25 @@ function App() {
               placeholder="Search"
               type="search"
               name="q"
-              
             />
             <div id="search-spinner" aria-hidden hidden={true} />
           </form>
         </div>
         <nav>
-          <ul>
+          <ul className="flex flex-col gap-2">
             <li>
-              <a href="#">Blog</a>
+              <Link to={"blog"}>Blog</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to={`about`}>About</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to={`contact`}>Contact</Link>
             </li>
           </ul>
         </nav>
       </div>
-      <Blog />
+      <Outlet />
     </div>
   );
 }

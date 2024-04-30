@@ -19,7 +19,7 @@ function Posts() {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className="p-5">
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
